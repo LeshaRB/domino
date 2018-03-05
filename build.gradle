@@ -1,0 +1,51 @@
+plugins {
+  id "net.ltgt.apt" version "0.15"
+}
+
+apply from: "$rootDir/gradle/idea.gradle"
+
+group 'com.test.portal'
+version '1.0-SNAPSHOT'
+
+allprojects {
+  apply plugin: 'net.ltgt.apt'
+}
+
+subprojects {
+  apply from: "$rootDir/gradle/versions.gradle"
+  apply from: "$rootDir/gradle/java.gradle"
+  apply from: "$rootDir/gradle/codeQuality.gradle"
+
+  repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+  }
+
+  clean.doFirst {
+    println "$projectDir"
+//    delete "${rootDir}/build"
+//    delete "${rootDir}/war"
+//    delete "${rootDir}/out"
+  }
+
+  task fastRun(dependsOn: [clean, build]) {
+  }
+
+  gradle.taskGraph.whenReady {
+    if (gradle.taskGraph.hasTask(":${project.name}:fastRun")) {
+      checkstyleGenerated.enabled = false
+      checkstyleMain.enabled = false
+      checkstyleTest.enabled = false
+      findbugsMain.enabled = false
+      findbugsTest.enabled = false
+      pmdMain.enabled = false
+      pmdTest.enabled = false
+      test.enabled = false
+    }
+  }
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = "$gradleVersion"
+}
