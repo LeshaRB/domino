@@ -4,8 +4,8 @@ plugins {
 
 dependencies {
   // logger
-  compile("org.apache.logging.log4j:log4j-core:$log4jVersion")
-  compile("org.apache.logging.log4j:log4j-api:$log4jVersion")
+//  compile("org.apache.logging.log4j:log4j-core:$log4jVersion")
+//  compile("org.apache.logging.log4j:log4j-api:$log4jVersion")
 
   // domino ???
   compile("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
@@ -15,6 +15,7 @@ dependencies {
   // spring
   compileOnly("org.springframework.boot:spring-boot-configuration-processor")
   compile("org.springframework.boot:spring-boot-starter-jetty")
+  compile("org.springframework.boot:spring-boot-starter-log4j2")
   compile("org.springframework.boot:spring-boot-starter-web") {
     exclude module: "spring-boot-starter-tomcat"
   }
