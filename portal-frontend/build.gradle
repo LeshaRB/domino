@@ -1,15 +1,15 @@
 apply from: "$rootDir/gradle/gwt.gradle"
 
 dependencies {
-//  compile project(':portal-layout')
+  compile project(':web-portal')
 
   // GWT framework
   compileOnly("com.google.gwt:gwt-user:$gwtVersion")
   compileOnly("com.google.gwt:gwt-dev:$gwtVersion")
 
   // domino ???
-  compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
-  compileOnly("com.progressoft.brix.domino.logging:domino-gwt-logger:$dominoVersion")
+//  compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
+//  compileOnly("com.progressoft.brix.domino.logging:domino-gwt-logger:$dominoVersion")
 }
 
 compileGwt {
