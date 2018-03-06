@@ -8,8 +8,15 @@ dependencies {
   compileOnly("com.google.gwt:gwt-dev:$gwtVersion")
 
   // domino ???
-//  compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
+  compileOnly("com.progressoft.brix.domino.api:domino-api-shared:$dominoVersion")
+  compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
+  compileOnly("com.progressoft.brix.domino.impl:domino-gwt:$dominoVersion")
 //  compileOnly("com.progressoft.brix.domino.logging:domino-gwt-logger:$dominoVersion")
+
+  annotationProcessor("com.progressoft.brix.domino.apt:apt-client:$dominoVersion")
+//  annotationProcessor("com.progressoft.brix.domino.api:domino-api-shared:$dominoVersion")
+  annotationProcessor("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
+//  annotationProcessor("com.progressoft.brix.domino.impl:domino-gwt:$dominoVersion")
 }
 
 compileGwt {
