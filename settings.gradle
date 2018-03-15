@@ -1,3 +1,8 @@
-include 'portal-backend'
-include 'portal-frontend'
-include 'web-portal'
+include "portal-backend"
+//include "portal-frontend"
+include "web-portal"
+
+include "web-portal-backend"
+include "web-portal-frontend"
+include "web-portal-frontend-ui"
+include "web-portal-shared"

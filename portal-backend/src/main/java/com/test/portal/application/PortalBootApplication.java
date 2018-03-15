@@ -8,6 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Log4j2
 public class PortalBootApplication {
 
+  private PortalBootApplication() {
+  }
+
   public static void main(String[] args) {
     SpringApplication.run(PortalBootApplication.class, args);
   }

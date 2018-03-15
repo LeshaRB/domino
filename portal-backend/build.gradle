@@ -1,8 +1,12 @@
 plugins {
-  id "org.springframework.boot" version "1.5.10.RELEASE"
+  id "org.springframework.boot" version "2.0.0.RELEASE"
 }
 
+apply plugin: "io.spring.dependency-management"
+
 dependencies {
+  compile project(":web-portal-backend")
+
   // logger
 //  compile("org.apache.logging.log4j:log4j-core:$log4jVersion")
 //  compile("org.apache.logging.log4j:log4j-api:$log4jVersion")
@@ -30,9 +34,9 @@ dependencies {
 }
 
 jar {
-  dependsOn(":portal-frontend:compileGwt")
-  into("static") {
-    from(":portal-frontend:compileGwt:buildDir")
+//  dependsOn(":portal-frontend:compileGwt")
+//  into("static") {
+//    from(":portal-frontend:compileGwt:buildDir")
 //    from compileGwt.buildDir
-  }
+//  }
 }

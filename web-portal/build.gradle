@@ -1,0 +1,6 @@
+dependencies {
+  compile project(":web-portal-backend")
+  compile project(":web-portal-frontend")
+  compile project(":web-portal-frontend-ui")
+  compile project(":web-portal-shared")
+}
