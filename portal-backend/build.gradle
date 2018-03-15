@@ -7,14 +7,15 @@ apply plugin: "io.spring.dependency-management"
 dependencies {
   compile project(":web-portal-backend")
 
-  // logger
-//  compile("org.apache.logging.log4j:log4j-core:$log4jVersion")
-//  compile("org.apache.logging.log4j:log4j-api:$log4jVersion")
+  compileOnly("io.vertx:vertx-web:$vertxwebVersion")
+  compileOnly("com.google.gwt:gwt-servlet:$gwtVersion")
 
   // domino ???
-  compile("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
-  compile("com.progressoft.brix.domino.api:domino-api-shared:$dominoVersion")
-  compile("com.progressoft.brix.domino.sample:todolist-items-backend:1.0-SNAPSHOT")
+  compileOnly("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
+  compileOnly("com.progressoft.brix.domino.api:domino-api-shared:$dominoVersion")
+  compileOnly("com.progressoft.brix.domino.logging:domino-remote-logging:$dominoVersion")
+  compileOnly("com.progressoft.brix.domino.logging:domino-log4j-server-logging:$dominoVersion")
+  compileOnly("com.progressoft.brix.domino.sample:todolist-items-backend:1.0-SNAPSHOT")
 
   // spring
   compileOnly("org.springframework.boot:spring-boot-configuration-processor")
@@ -28,8 +29,6 @@ dependencies {
   compileOnly("org.projectlombok:lombok:$lombokVersion")
   annotationProcessor("org.projectlombok:lombok:$lombokVersion")
 
-  // common testing
-  testCompile("junit:junit:$junitVersion")
   testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 

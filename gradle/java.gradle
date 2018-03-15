@@ -35,3 +35,7 @@ compileJava {
 test {
   systemProperties = System.properties
 }
+
+dependencies {
+  testCompile("junit:junit:$junitVersion")
+}
