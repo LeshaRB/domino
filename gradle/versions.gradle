@@ -6,6 +6,7 @@ ext {
   junitVersion = "4.12"
   gwtmockitoVersion = "1.1.8"
   assertjcoreVersion = "3.9.1"
+  slf4jVersion = "1.7.25"
 
   // common library
   dominoVersion = "1.0-rc.2"
@@ -22,7 +23,8 @@ ext {
   gwtMaterialAddinsVersion = "2.0.1"
   gwtMaterialThemesVersion = "2.0.1"
   gwtMaterialTableVersion = "2.0.1"
-//  autoServiceVersion = "1.0-rc4"
+
+  autoServiceVersion = "1.0-rc4"
 //  restyGwtVersion = "2.2.3"
 //  elemental2Version = "1.0.0-RC1"
 }

@@ -4,7 +4,7 @@ dependencies {
   compileOnly("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.apt:apt-server:$dominoVersion")
 
-  compile 'com.google.auto.service:auto-service:1.0-rc4'
+  compileOnly("com.google.auto.service:auto-service:$autoServiceVersion")
 
   testCompile("com.progressoft.brix.domino.test:domino-server-test:$dominoVersion")
 }
