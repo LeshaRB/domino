@@ -23,7 +23,7 @@ subprojects {
   }
 
   clean.doFirst {
-    println "$projectDir"
+//    println "$projectDir"
 //    delete "${rootDir}/build"
 //    delete "${rootDir}/war"
 //    delete "${rootDir}/out"

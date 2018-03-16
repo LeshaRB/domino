@@ -7,27 +7,26 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
-import com.google.gwt.user.client.ui.IsWidget;
-
 import com.progressoft.brix.domino.api.client.annotations.UiView;
-
 import com.test.portal.webportal.client.presenters.WebPortalPresenter;
 import com.test.portal.webportal.client.views.WebPortalView;
 
 @UiView(presentable = WebPortalPresenter.class)
-public class DefaultWebPortalView extends Composite implements WebPortalView{
+public class DefaultWebPortalView extends Composite implements WebPortalView {
 
-    interface DefaultWebPortalViewUiBinder extends UiBinder<HTMLPanel, DefaultWebPortalView> {
-    }
+  private static DefaultWebPortalViewUiBinder ourUiBinder = GWT.create(DefaultWebPortalViewUiBinder.class);
+  @UiField
+  DivElement mainDiv;
 
-    private static DefaultWebPortalViewUiBinder ourUiBinder = GWT.create(DefaultWebPortalViewUiBinder.class);
+  public DefaultWebPortalView() {
+    initWidget(ourUiBinder.createAndBindUi(this));
+    mainDiv.setInnerHTML("<h1>Hello world!</h1>");
+    Document.get()
+        .getBody()
+        .appendChild(mainDiv);
+  }
 
-    @UiField
-    DivElement mainDiv;
+  interface DefaultWebPortalViewUiBinder extends UiBinder<HTMLPanel, DefaultWebPortalView> {
 
-    public DefaultWebPortalView() {
-        initWidget(ourUiBinder.createAndBindUi(this));
-        mainDiv.setInnerHTML("<h1>Hello world!</h1>");
-        Document.get().getBody().appendChild(mainDiv);
-    }
+  }
 }

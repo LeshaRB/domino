@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module>
-  <inherits name="com.google.gwt.user.User" />
-  <inherits name="com.google.gwt.user.theme.clean.Clean" />
+  <inherits name="com.google.gwt.user.User"/>
+  <inherits name="com.google.gwt.user.theme.clean.Clean"/>
 
 
-  <source path="" />
+  <source path=""/>
 
-  <entry-point class="com.test.portal.webportal.client.WebPortalClientModule" />
+  <entry-point class="com.test.portal.webportal.client.WebPortalClientModule"/>
 
   <set-configuration-property name="CssResource.enableGss" value="true"/>
 

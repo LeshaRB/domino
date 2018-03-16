@@ -1,31 +1,31 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="super-dev-mode" type="MavenRunConfiguration" factoryName="Maven">
+  <configuration default="false" factoryName="Maven" name="super-dev-mode" type="MavenRunConfiguration">
     <MavenSettings>
-      <option name="myGeneralSettings" />
-      <option name="myRunnerSettings" />
+      <option name="myGeneralSettings"/>
+      <option name="myRunnerSettings"/>
       <option name="myRunnerParameters">
         <MavenRunnerParameters>
           <option name="profiles">
-            <set />
+            <set/>
           </option>
           <option name="goals">
             <list>
-              <option value="gwt:codeserver" />
-              <option value="-o" />
+              <option value="gwt:codeserver"/>
+              <option value="-o"/>
             </list>
           </option>
           <option name="profilesMap">
             <map>
-              <entry key="pl" value="false" />
-              <entry key="*-frontend" value="true" />
-              <entry key="am" value="false" />
+              <entry key="pl" value="false"/>
+              <entry key="*-frontend" value="true"/>
+              <entry key="am" value="false"/>
             </map>
           </option>
-          <option name="resolveToWorkspace" value="false" />
-          <option name="workingDirPath" value="$PROJECT_DIR$" />
+          <option name="resolveToWorkspace" value="false"/>
+          <option name="workingDirPath" value="$PROJECT_DIR$"/>
         </MavenRunnerParameters>
       </option>
     </MavenSettings>
-    <method />
+    <method/>
   </configuration>
 </component>

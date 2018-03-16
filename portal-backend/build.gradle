@@ -7,12 +7,13 @@ apply plugin: "io.spring.dependency-management"
 dependencies {
   compile project(":web-portal-backend")
 
+//  https://github.com/vert-x3/vertx-codegen/issues/134
   compileOnly("io.vertx:vertx-web:$vertxwebVersion")
   compileOnly("com.google.gwt:gwt-servlet:$gwtVersion")
 
   // domino ???
   compileOnly("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
-  compileOnly("com.progressoft.brix.domino.api:domino-api-shared:$dominoVersion")
+  compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.logging:domino-remote-logging:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.logging:domino-log4j-server-logging:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.sample:todolist-items-backend:1.0-SNAPSHOT")

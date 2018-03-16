@@ -4,8 +4,8 @@ import com.google.gwt.core.client.GWT;
 
 public class Bundle {
 
-    public static final WebPortalBundle INSTANCE= GWT.create(WebPortalBundle.class);
+  public static final WebPortalBundle INSTANCE = GWT.create(WebPortalBundle.class);
 
-    private Bundle() {
-    }
+  private Bundle() {
+  }
 }

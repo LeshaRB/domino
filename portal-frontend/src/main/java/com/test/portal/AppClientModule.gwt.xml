@@ -4,10 +4,11 @@
   <inherits name="com.google.gwt.user.theme.clean.Clean"/>
   <inherits name="com.progressoft.brix.domino.logger.Logging"/>
 
-  <!--<inherits name="com.progressoft.brix.domino.gwt.Core"/>-->
-  <!--<inherits name="com.progressoft.brix.domino.api.Domino"/>-->
-  <!--<inherits name="com.test.portal.webportal.WebPortalClientModule"/>-->
-  <!--<inherits name="com.test.portal.webportal.WebPortalUIClientModule"/>-->
+  <inherits name="com.progressoft.brix.domino.gwt.Core"/>
+  <inherits name="com.progressoft.brix.domino.api.Domino"/>
+
+  <inherits name="com.test.portal.webportal.WebPortalClientModule"/>
+  <inherits name="com.test.portal.webportal.WebPortalUIClientModule"/>
 
   <source path=""/>
 

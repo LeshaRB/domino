@@ -1,8 +1,8 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-  <xsl:output method="html" indent="yes"/>
+  <xsl:output indent="yes" method="html"/>
   <xsl:decimal-format decimal-separator="." grouping-separator=","/>
 
-  <xsl:key name="files" match="file" use="@name"/>
+  <xsl:key match="file" name="files" use="@name"/>
 
   <xsl:template match="checkstyle">
     <html>
@@ -83,18 +83,18 @@
         <hr size="1"/>
 
         <!-- Summary part -->
-        <xsl:apply-templates select="." mode="summary"/>
-        <hr size="1" width="100%" align="left"/>
+        <xsl:apply-templates mode="summary" select="."/>
+        <hr align="left" size="1" width="100%"/>
 
         <!-- Package List part -->
-        <xsl:apply-templates select="." mode="filelist"/>
-        <hr size="1" width="100%" align="left"/>
+        <xsl:apply-templates mode="filelist" select="."/>
+        <hr align="left" size="1" width="100%"/>
 
         <!-- For each package create its part -->
         <xsl:apply-templates
           select="file[@name and generate-id(.) = generate-id(key('files', @name))]"/>
 
-        <hr size="1" width="100%" align="left"/>
+        <hr align="left" size="1" width="100%"/>
 
 
       </body>
@@ -104,7 +104,7 @@
 
   <xsl:template match="checkstyle" mode="filelist">
     <h3>Files</h3>
-    <table class="log" border="0" cellpadding="5" cellspacing="2" width="100%">
+    <table border="0" cellpadding="5" cellspacing="2" class="log" width="100%">
       <tr>
         <th>Name</th>
         <th>Errors</th>
@@ -135,7 +135,7 @@
       <xsl:value-of select="@name"/>
     </h3>
 
-    <table class="log" border="0" cellpadding="5" cellspacing="2" width="100%">
+    <table border="0" cellpadding="5" cellspacing="2" class="log" width="100%">
       <tr>
         <th>Error Description</th>
         <th>Line</th>
@@ -162,7 +162,7 @@
     <xsl:variable name="fileCount"
       select="count(file[@name and generate-id(.) = generate-id(key('files', @name))])"/>
     <xsl:variable name="errorCount" select="count(file/error)"/>
-    <table class="log" border="0" cellpadding="5" cellspacing="2" width="100%">
+    <table border="0" cellpadding="5" cellspacing="2" class="log" width="100%">
       <tr>
         <th>Files</th>
         <th>Errors</th>

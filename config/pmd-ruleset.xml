@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="PMD Ruleset"
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  name="PMD Ruleset"
   xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
   <description>PMD Ruleset</description>
   <rule ref="category/java/errorprone.xml/UnusedNullCheckInEquals">
@@ -277,8 +277,8 @@
   <rule ref="category/java/multithreading.xml/DoubleCheckedLocking">
     <priority>3</priority>
   </rule>
-  <rule name="UseApisFromJDK8" message="Please use the new API in Java 8"
-    class="net.sourceforge.pmd.lang.rule.XPathRule" language="java">
+  <rule class="net.sourceforge.pmd.lang.rule.XPathRule" language="java"
+    message="Please use the new API in Java 8" name="UseApisFromJDK8">
     <description>Please use the new API in Java 8</description>
     <priority>1</priority>
     <properties>

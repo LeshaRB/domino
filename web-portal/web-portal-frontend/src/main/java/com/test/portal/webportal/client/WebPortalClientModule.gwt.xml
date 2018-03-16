@@ -2,12 +2,13 @@
 <module>
   <inherits name="com.google.gwt.user.User"/>
   <inherits name="com.google.gwt.user.theme.clean.Clean"/>
-  <inherits name="gwt.material.design.GwtMaterialWithJQuery"/>
-  <inherits name="gwt.material.design.addins.GwtMaterialAddins"/>
+
+  <inherits name="com.progressoft.brix.domino.api.Domino"/>
+  <inherits name="com.progressoft.brix.domino.logger.Logging"/>
 
   <source path=""/>
 
-  <entry-point class="com.test.portal.webportal.client.WebPortalUIClientModule"/>
+  <entry-point class="com.test.portal.webportal.client.WebPortalClientModule"/>
 
   <set-configuration-property name="CssResource.enableGss" value="true"/>
 

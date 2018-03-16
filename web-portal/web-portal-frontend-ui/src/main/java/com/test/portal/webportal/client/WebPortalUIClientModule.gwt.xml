@@ -5,6 +5,11 @@
   <inherits name="gwt.material.design.GwtMaterialWithJQuery"/>
   <inherits name="gwt.material.design.addins.GwtMaterialAddins"/>
 
+  <inherits name="com.progressoft.brix.domino.api.Domino"/>
+  <inherits name="com.progressoft.brix.domino.logger.Logging"/>
+
+  <inherits name="com.test.portal.webportal.WebPortalClientModule"/>
+
   <source path=""/>
 
   <entry-point class="com.test.portal.webportal.client.WebPortalUIClientModule"/>
