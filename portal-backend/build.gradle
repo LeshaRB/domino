@@ -34,9 +34,9 @@ dependencies {
 }
 
 jar {
-//  dependsOn(":portal-frontend:compileGwt")
-//  into("static") {
-//    from(":portal-frontend:compileGwt:buildDir")
+  dependsOn(":portal-frontend:compileGwt")
+  into("static") {
+    from(":portal-frontend:compileGwt:buildDir")
 //    from compileGwt.buildDir
-//  }
+  }
 }
