@@ -1,8 +1,8 @@
 dependencies {
   compile project(":web-portal-frontend")
-//  annotationProcessor(":web-portal-frontend")
+//  compile project(":web-portal-frontend:sources")
   compile project(":web-portal-shared")
-//  annotationProcessor(":web-portal-shared")
+//  compile project(":web-portal-shared:sources")
 
   // GWT framework
   compileOnly("com.google.gwt:gwt-user:$gwtVersion")
@@ -13,8 +13,8 @@ dependencies {
 
   compileOnly("com.progressoft.brix.domino.logging:domino-gwt-logger:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
+  compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion:sources")
   annotationProcessor("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
-  compileOnly("com.progressoft.brix.domino.apt:apt-client:$dominoVersion")
   annotationProcessor("com.progressoft.brix.domino.apt:apt-client:$dominoVersion")
 
   testCompile("com.google.gwt.gwtmockito:gwtmockito:$gwtmockitoVersion")

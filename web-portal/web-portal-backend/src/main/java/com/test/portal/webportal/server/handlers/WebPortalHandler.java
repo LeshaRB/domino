@@ -8,7 +8,7 @@ import com.test.portal.webportal.shared.response.WebPortalResponse;
 import java.util.logging.Logger;
 
 /**
- * Sample request class
+ * Sample request class.
  */
 @Handler("WebPortalRequest")
 public class WebPortalHandler implements RequestHandler<WebPortalRequest, WebPortalResponse> {

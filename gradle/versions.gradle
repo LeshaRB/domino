@@ -7,6 +7,7 @@ ext {
   gwtmockitoVersion = "1.1.8"
   assertjcoreVersion = "3.9.1"
   slf4jVersion = "1.7.25"
+  assertjCoreVersion = "3.9.1"
 
   // common library
   dominoVersion = "1.0-rc.2"

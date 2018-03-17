@@ -33,10 +33,10 @@ dependencies {
   testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
-jar {
-  dependsOn(":portal-frontend:compileGwt")
-  into("static") {
-    from(":portal-frontend:compileGwt:buildDir")
+//jar {
+//  dependsOn(":portal-frontend:compileGwt")
+//  into("static") {
+//    from(":portal-frontend:compileGwt:buildDir")
 //    from compileGwt.buildDir
-  }
-}
+//  }
+//}

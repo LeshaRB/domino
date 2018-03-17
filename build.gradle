@@ -12,14 +12,19 @@ allprojects {
 }
 
 subprojects {
-  apply from: "$rootDir/gradle/versions.gradle"
-  apply from: "$rootDir/gradle/java.gradle"
-  apply from: "$rootDir/gradle/codeQuality.gradle"
-
   repositories {
     mavenCentral()
     mavenLocal()
     jcenter()
+  }
+
+  apply from: "$rootDir/gradle/versions.gradle"
+  apply from: "$rootDir/gradle/java.gradle"
+  apply from: "$rootDir/gradle/codeQuality.gradle"
+
+  dependencies {
+    testCompile("junit:junit:$junitVersion")
+//  testCompile("org.assertj:assertj-core:$assertjCoreVersion")
   }
 
   clean.doFirst {
