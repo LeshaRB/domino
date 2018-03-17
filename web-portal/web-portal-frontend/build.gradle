@@ -1,16 +1,22 @@
 dependencies {
   compile project(":web-portal-shared")
-//  compile project(":web-portal-shared:sources")
+
+  // Other
+  compileOnly("org.fusesource.restygwt:restygwt:$restyGwtVersion")
+  compileOnly("javax.ws.rs:javax.ws.rs-api:$wsrsapiVersion")
+  compileOnly("com.google.auto.service:auto-service:$autoServiceVersion")
+  annotationProcessor("com.google.auto.service:auto-service:$autoServiceVersion")
 
   // GWT framework
   compileOnly("com.google.gwt:gwt-user:$gwtVersion")
 
+  // Domino framework
   compileOnly("com.progressoft.brix.domino.logging:domino-gwt-logger:$dominoVersion")
-
   compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
-//  compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion:sources")
+
   annotationProcessor("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
   annotationProcessor("com.progressoft.brix.domino.apt:apt-client:$dominoVersion")
+  annotationProcessor("com.progressoft.brix.domino.impl:domino-gwt:$dominoVersion")
 
   testCompile("com.google.gwt.gwtmockito:gwtmockito:$gwtmockitoVersion")
   testCompile("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")

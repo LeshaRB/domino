@@ -23,6 +23,7 @@ subprojects {
   apply from: "$rootDir/gradle/codeQuality.gradle"
 
   dependencies {
+    // Test
     testCompile("junit:junit:$junitVersion")
 //  testCompile("org.assertj:assertj-core:$assertjCoreVersion")
   }

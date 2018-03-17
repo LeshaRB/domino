@@ -7,36 +7,40 @@ apply plugin: "io.spring.dependency-management"
 dependencies {
   compile project(":web-portal-backend")
 
-//  https://github.com/vert-x3/vertx-codegen/issues/134
+  // Other
+  // https://github.com/vert-x3/vertx-codegen/issues/134
   compileOnly("io.vertx:vertx-web:$vertxwebVersion")
+  compileOnly("javax.ws.rs:javax.ws.rs-api:$wsrsapiVersion")
+
+  // GWT framework
   compileOnly("com.google.gwt:gwt-servlet:$gwtVersion")
 
-  // domino ???
+  // Domino framework
   compileOnly("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.logging:domino-remote-logging:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.logging:domino-log4j-server-logging:$dominoVersion")
 //  compileOnly("com.progressoft.brix.domino.sample:todolist-items-backend:1.0-SNAPSHOT")
 
-  // spring
+  // Spring framework
   compileOnly("org.springframework.boot:spring-boot-configuration-processor")
   compile("org.springframework.boot:spring-boot-starter-jetty")
   compile("org.springframework.boot:spring-boot-starter-log4j2")
   compile("org.springframework.boot:spring-boot-starter-web") {
     exclude module: "spring-boot-starter-tomcat"
   }
-  compile("javax.ws.rs:javax.ws.rs-api:$wsrsapiVersion")
 
+  // Lombok
   compileOnly("org.projectlombok:lombok:$lombokVersion")
   annotationProcessor("org.projectlombok:lombok:$lombokVersion")
 
   testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
-//jar {
-//  dependsOn(":portal-frontend:compileGwt")
-//  into("static") {
-//    from(":portal-frontend:compileGwt:buildDir")
+jar {
+  dependsOn(":portal-frontend:compileGwt")
+  into("static") {
+    from(":portal-frontend:compileGwt:buildDir")
 //    from compileGwt.buildDir
-//  }
-//}
+  }
+}

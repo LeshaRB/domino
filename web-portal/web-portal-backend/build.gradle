@@ -1,8 +1,11 @@
 dependencies {
   compile project(":web-portal-shared")
 
+  // Other
   compileOnly("com.google.auto.service:auto-service:$autoServiceVersion")
+  annotationProcessor("com.google.auto.service:auto-service:$autoServiceVersion")
 
+  // Domino framework
   compileOnly("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.apt:apt-server:$dominoVersion")
 

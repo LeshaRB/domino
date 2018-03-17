@@ -2,30 +2,33 @@ ext {
   //build
   gradleVersion = "4.6"
 
-  // test
-  junitVersion = "4.12"
-  gwtmockitoVersion = "1.1.8"
-  assertjcoreVersion = "3.9.1"
-  slf4jVersion = "1.7.25"
-  assertjCoreVersion = "3.9.1"
-
-  // common library
+  // Domino framework
   dominoVersion = "1.0-rc.2"
 
-  // server library
-  lombokVersion = "1.16.20"
-  wsrsapiVersion = "2.1"
-  vertxwebVersion = "3.5.1"
-
-  // client library
+  // GWT framework
   gwtVersion = "2.8.2"
 
+  // GMD framework
   gwtMaterialVersion = "2.0.1"
   gwtMaterialAddinsVersion = "2.0.1"
   gwtMaterialThemesVersion = "2.0.1"
   gwtMaterialTableVersion = "2.0.1"
 
+  // Test
+  junitVersion = "4.12"
+  gwtmockitoVersion = "1.1.8"
+  assertjcoreVersion = "3.9.1"
+  slf4jVersion = "1.7.25"
+
+  // Other
   autoServiceVersion = "1.0-rc4"
-//  restyGwtVersion = "2.2.3"
-//  elemental2Version = "1.0.0-RC1"
+  wsrsapiVersion = "2.1"
+  vertxwebVersion = "3.5.1"
+  restyGwtVersion = "2.2.3"
+
+  // Lombok
+  lombokVersion = "1.16.20"
+
+  // Elemental2 framework
+  elemental2Version = "1.0.0-RC1"
 }
