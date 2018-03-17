@@ -7,8 +7,8 @@
   <inherits name="com.progressoft.brix.domino.gwt.Core"/>
   <inherits name="com.progressoft.brix.domino.api.Domino"/>
 
-  <inherits name="com.test.portal.webportal.client.WebPortalClientModule"/>
-  <inherits name="com.test.portal.webportal.client.WebPortalUIClientModule"/>
+  <!--<inherits name="com.test.portal.webportal.client.WebPortalClientModule"/>-->
+  <!--<inherits name="com.test.portal.webportal.client.WebPortalUIClientModule"/>-->
 
   <source path=""/>
 

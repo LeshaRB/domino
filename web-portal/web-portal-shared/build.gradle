@@ -1,5 +1,4 @@
 dependencies {
-  compileOnly("javax.validation:validation-api:2.0.1.Final")
-
+//  compileOnly("javax.validation:validation-api:2.0.1.Final")
   compileOnly("com.progressoft.brix.domino.api:domino-api-shared:$dominoVersion")
 }

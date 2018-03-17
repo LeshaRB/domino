@@ -2,12 +2,12 @@ plugins {
   id "net.ltgt.apt" version "0.15"
 }
 
-apply from: "$rootDir/gradle/idea.gradle"
-
 group 'com.test.portal'
 version '1.0-SNAPSHOT'
 
 allprojects {
+  apply from: "$rootDir/gradle/idea.gradle"
+
   apply plugin: 'net.ltgt.apt'
 }
 
@@ -25,7 +25,6 @@ subprojects {
   dependencies {
     // Test
     testCompile("junit:junit:$junitVersion")
-//  testCompile("org.assertj:assertj-core:$assertjCoreVersion")
   }
 
   clean.doFirst {
@@ -40,7 +39,7 @@ subprojects {
 
   gradle.taskGraph.whenReady {
     if (gradle.taskGraph.hasTask(":${project.name}:fastRun")) {
-      checkstyleGenerated.enabled = false
+//      checkstyleGenerated.enabled = false
       checkstyleMain.enabled = false
       checkstyleTest.enabled = false
       findbugsMain.enabled = false
