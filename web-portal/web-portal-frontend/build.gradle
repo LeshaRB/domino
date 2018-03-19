@@ -21,4 +21,6 @@ dependencies {
   testCompile("org.assertj:assertj-core:$assertjcoreVersion")
   testCompile("com.google.gwt.gwtmockito:gwtmockito:$gwtmockitoVersion")
   testCompile("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
+
+  annotationProcessor("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
 }

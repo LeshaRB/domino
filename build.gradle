@@ -2,12 +2,12 @@ plugins {
   id "net.ltgt.apt" version "0.15"
 }
 
+apply from: "$rootDir/gradle/idea.gradle"
+
 group 'com.test.portal'
 version '1.0-SNAPSHOT'
 
 allprojects {
-  apply from: "$rootDir/gradle/idea.gradle"
-
   apply plugin: 'net.ltgt.apt'
 }
 

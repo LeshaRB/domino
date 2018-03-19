@@ -1,38 +1,20 @@
-//def generatedDir = new File("$projectDir", "src/generated")
+def generatedDir = new File(buildDir, "generated/source")
 
-apply plugin: 'java'
+apply plugin: "java"
 
 sourceSets {
-//  generated {
-//    java.srcDir "src/generated"
-//  }
-  main.java.srcDir 'src/main/java'
-//  main.java.srcDirs = ['src/main/java', "src/generated/main/java"]
+  main.java.srcDirs = ["$generatedDir/main", "src/main/java"]
   main.resources.srcDir "src/main/resources"
-  test.java.srcDir 'src/test/java'
-//  test.java.srcDirs = ['src/test/java', "src/generated/test/java"]
+  test.java.srcDirs = ["$generatedDir/test", "src/test/java"]
   test.resources.srcDir "src/test/resources"
 }
-
-// deletes generated classes before new compilation
-//task deleteGenerated(type: Delete) {
-//  generatedDir.deleteDir()
-//}
-
-//compileGeneratedJava {
-//  dependsOn('deleteGenerated')
-//}
 
 compileJava {
   sourceCompatibility = "1.8"
   targetCompatibility = "1.8"
-  options.encoding = 'UTF-8'
-  options.compilerArgs = ['-Xlint:unchecked'] // Just a smoke test that using this option does not lead to any
-//  options.annotationProcessorGeneratedSourcesDirectory = new File("$generatedDir", "java")
-  //  dependsOn(processResources)
-//  dependsOn(processResources, compileGeneratedJava)
-//  source += sourceSets.generated.java
-//  source += sourceSets.generated.output
+  options.encoding = "UTF-8"
+  options.compilerArgs = ["-Xlint:unchecked"] // Just a smoke test that using this option does not lead to any
+  dependsOn(processResources)
 }
 
 test {

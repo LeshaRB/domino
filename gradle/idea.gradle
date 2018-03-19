@@ -1,33 +1,25 @@
 /**
  * Defines general configuration for all Idea IDE based projects.
  */
+
 apply plugin: 'idea'
 
-//sourceSets.main.java.srcDir new File(buildDir, 'generated/source')
-
-idea {
-  module {
-    println "$buildDir/generated/source/apt/"
-    generatedSourceDirs += file("$buildDir/generated/source/apt/")
+idea.module.iml {
+  beforeMerged { module ->
+    module.dependencies.clear()
+  }
+  whenMerged { module ->
+    module.dependencies*.exported = true
   }
 }
 
-//idea.module.iml {
-//  beforeMerged { module ->
-//    module.dependencies.clear()
-//  }
-//  whenMerged { module ->
-//    module.dependencies*.exported = true
-//  }
-//}
-
-//idea.project.ipr {
-//  beforeMerged { project ->
-//    project.modulePaths.clear()
-//  }
-//  withXml { provider ->
-//    provider.node.component.find {
-//      it.@name == 'VcsDirectoryMappings'
-//    }.mapping.@vcs = 'Git'
-//  }
-//}
+idea.project.ipr {
+  beforeMerged { project ->
+    project.modulePaths.clear()
+  }
+  withXml { provider ->
+    provider.node.component.find {
+      it.@name == 'VcsDirectoryMappings'
+    }.mapping.@vcs = 'Git'
+  }
+}
