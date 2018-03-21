@@ -9,5 +9,6 @@ dependencies {
   compileOnly("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.apt:apt-server:$dominoVersion")
 
-  testCompile("com.progressoft.brix.domino.test:domino-server-test:$dominoVersion")
+  testCompileOnly("com.progressoft.brix.domino.test:domino-server-test:$dominoVersion")
+  testAnnotationProcessor("com.progressoft.brix.domino.test:domino-server-test:$dominoVersion")
 }

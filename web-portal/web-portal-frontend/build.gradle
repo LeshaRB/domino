@@ -13,14 +13,12 @@ dependencies {
   // Domino framework
   compileOnly("com.progressoft.brix.domino.logging:domino-gwt-logger:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
-
   annotationProcessor("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
   annotationProcessor("com.progressoft.brix.domino.apt:apt-client:$dominoVersion")
   annotationProcessor("com.progressoft.brix.domino.impl:domino-gwt:$dominoVersion")
 
   testCompile("org.assertj:assertj-core:$assertjcoreVersion")
   testCompile("com.google.gwt.gwtmockito:gwtmockito:$gwtmockitoVersion")
-  testCompile("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
-
-  annotationProcessor("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
+  testCompileOnly("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
+  testAnnotationProcessor("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
 }

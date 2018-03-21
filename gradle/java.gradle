@@ -13,7 +13,6 @@ compileJava {
   sourceCompatibility = "1.8"
   targetCompatibility = "1.8"
   options.encoding = "UTF-8"
-  options.compilerArgs = ["-Xlint:unchecked"] // Just a smoke test that using this option does not lead to any
   dependsOn(processResources)
 }
 
