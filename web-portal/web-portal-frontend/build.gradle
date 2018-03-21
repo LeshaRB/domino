@@ -19,6 +19,11 @@ dependencies {
 
   testCompile("org.assertj:assertj-core:$assertjcoreVersion")
   testCompile("com.google.gwt.gwtmockito:gwtmockito:$gwtmockitoVersion")
+  testCompileOnly("com.google.auto.service:auto-service:$autoServiceVersion")
   testCompileOnly("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
   testAnnotationProcessor("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
+  testAnnotationProcessor("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
+  testAnnotationProcessor("com.progressoft.brix.domino.apt:apt-client:$dominoVersion")
+  testAnnotationProcessor("com.progressoft.brix.domino.impl:domino-gwt:$dominoVersion")
+  testAnnotationProcessor("com.google.auto.service:auto-service:$autoServiceVersion")
 }
