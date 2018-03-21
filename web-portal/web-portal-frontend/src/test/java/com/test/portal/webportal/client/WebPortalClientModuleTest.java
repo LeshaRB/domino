@@ -1,5 +1,6 @@
 package com.test.portal.webportal.client;
 
+import static junit.framework.TestCase.assertNotNull;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
 
@@ -14,12 +15,14 @@ import com.test.portal.webportal.client.views.FakeWebPortalView;
 import com.test.portal.webportal.shared.request.WebPortalRequest;
 import com.test.portal.webportal.shared.response.WebPortalResponse;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 
 @ClientModule(name = "TestWebPortal")
 @RunWith(GwtMockitoTestRunner.class)
+@Ignore
 public class WebPortalClientModuleTest {
 
   private WebPortalPresenterSpy presenterSpy;
@@ -34,6 +37,7 @@ public class WebPortalClientModuleTest {
         .viewOf(WebPortalPresenter.class, view -> fakeView = (FakeWebPortalView) view)
         .onStartCompleted(clientContext -> this.clientContext = clientContext)
         .start();
+    assertNotNull(fakeView);
   }
 
   @Test

@@ -8,20 +8,22 @@ import com.test.portal.webportal.client.presenters.WebPortalPresenter;
 import com.test.portal.webportal.client.presenters.WebPortalPresenterSpy;
 import com.test.portal.webportal.client.views.WebPortalViewSpy;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(GwtMockitoTestRunner.class)
 @WithClassesToStub(RootPanel.class)
+@Ignore
 public class WebPortalClientModuleTest {
 
-  private WebPortalPresenterSpy presenterSpy;
-  private WebPortalViewSpy viewSpy;
+  //  private WebPortalPresenterSpy presenterSpy;
+  //  private WebPortalViewSpy viewSpy;
 
   @Before
   public void setUp() {
-    presenterSpy = new WebPortalPresenterSpy();
-    viewSpy = new WebPortalViewSpy();
+    WebPortalPresenterSpy presenterSpy = new WebPortalPresenterSpy();
+    WebPortalViewSpy viewSpy = new WebPortalViewSpy();
     DominoTestClient.useModules(new WebPortalModuleConfiguration(), new WebPortalUIModuleConfiguration())
         .replacePresenter(WebPortalPresenter.class, presenterSpy)
         .replaceView(WebPortalPresenter.class, viewSpy)
