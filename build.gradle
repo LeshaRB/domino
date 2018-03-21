@@ -27,19 +27,11 @@ subprojects {
     testCompile("junit:junit:$junitVersion")
   }
 
-  clean.doFirst {
-//    println "$projectDir"
-//    delete "${rootDir}/build"
-//    delete "${rootDir}/war"
-//    delete "${rootDir}/out"
-  }
-
   task fastRun(dependsOn: [clean, build]) {
   }
 
   gradle.taskGraph.whenReady {
     if (gradle.taskGraph.hasTask(":${project.name}:fastRun")) {
-//      checkstyleGenerated.enabled = false
       checkstyleMain.enabled = false
       checkstyleTest.enabled = false
       findbugsMain.enabled = false

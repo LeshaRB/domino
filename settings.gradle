@@ -1,11 +1,7 @@
 include "portal-backend"
 include "portal-frontend"
-//include "web-portal-backend"
-//project(":web-portal-backend").projectDir = new File("/media/lesharb/Data/Workspace/domino/web-portal/web-portal-backend")
 
 file("web-portal").eachDir { dir ->
-//  if (dir.name == "web-portal-backend" || dir.name == "web-portal-shared") {
   include dir.name
   project(":${dir.name}").projectDir = dir
-//  }
 }

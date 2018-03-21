@@ -1,6 +1,8 @@
 # How to run
 
-- #### run `mvn clean install` to build
+- #### run `gradle clean build` to build
+
+- #### run `gradle clean build fastRun` to fast build without checkstyles, findBugs and PMD
 
 - #### Run for development :
 
