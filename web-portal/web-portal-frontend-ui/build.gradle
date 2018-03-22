@@ -21,6 +21,6 @@ dependencies {
   annotationProcessor("com.progressoft.brix.domino.impl:domino-gwt:$dominoVersion")
 
   testCompile("com.google.gwt.gwtmockito:gwtmockito:$gwtmockitoVersion")
-  testCompileOnly("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
+  testCompile("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
   testAnnotationProcessor("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
 }

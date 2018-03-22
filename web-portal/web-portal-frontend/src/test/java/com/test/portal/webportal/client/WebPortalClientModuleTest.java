@@ -15,14 +15,12 @@ import com.test.portal.webportal.client.views.FakeWebPortalView;
 import com.test.portal.webportal.shared.request.WebPortalRequest;
 import com.test.portal.webportal.shared.response.WebPortalResponse;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 
 @ClientModule(name = "TestWebPortal")
 @RunWith(GwtMockitoTestRunner.class)
-@Ignore
 public class WebPortalClientModuleTest {
 
   private WebPortalPresenterSpy presenterSpy;

@@ -15,6 +15,7 @@ ext {
   gwtMaterialTableVersion = "2.0.1"
 
   // Test
+  slf4jVersion = "1.7.25"
   junitVersion = "4.12"
   gwtmockitoVersion = "1.1.8"
   assertjcoreVersion = "3.9.1"

@@ -8,13 +8,11 @@ import com.test.portal.webportal.client.presenters.WebPortalPresenter;
 import com.test.portal.webportal.client.presenters.WebPortalPresenterSpy;
 import com.test.portal.webportal.client.views.WebPortalViewSpy;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(GwtMockitoTestRunner.class)
 @WithClassesToStub(RootPanel.class)
-@Ignore
 public class WebPortalClientModuleTest {
 
   //  private WebPortalPresenterSpy presenterSpy;
