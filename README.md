@@ -4,12 +4,13 @@
 
 - #### run `gradle clean build fastRun` to fast build without checkstyles, findBugs and PMD
 
+- #### run `gradle clean build fastRun -P dev` compile in dev mode
+
 - #### Run for development :
 
   - ##### For super dev mode 
   
-    - In one terminal run `mvn gwt:codeserver -pl *-frontend -am`
-    
+    - In one terminal run `mvn gwt:codeserver -pl *-frontend -am`  
     - In another terminal `cd portal-backend`
     - execute `mvn exec:java`
     - the server port will be printed in the logs access the application on `http://localhost:[port]`
