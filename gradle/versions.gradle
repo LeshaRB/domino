@@ -15,11 +15,9 @@ ext {
   gwtMaterialTableVersion = "2.0.1"
 
   // Test
-  slf4jVersion = "1.7.25"
   junitVersion = "4.12"
   gwtmockitoVersion = "1.1.8"
   assertjcoreVersion = "3.9.1"
-  slf4jVersion = "1.7.25"
 
   // Other
   autoServiceVersion = "1.0-rc4"
@@ -29,7 +27,4 @@ ext {
 
   // Lombok
   lombokVersion = "1.16.20"
-
-  // Elemental2 framework
-  elemental2Version = "1.0.0-RC1"
 }

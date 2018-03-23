@@ -1,12 +1,12 @@
 package com.test.portal.controller;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/service/todo/")
-@Log4j2
+@Slf4j
 public class TodoListController {
 /*
   private <R extends RequestBean, S extends ResponseBean> SpringExecutionContext<R, S> createExecutionContext(R request,

@@ -4,6 +4,7 @@ import com.progressoft.brix.domino.api.shared.request.ResponseBean;
 
 public class WebPortalResponse implements ResponseBean {
 
+  private static final long serialVersionUID = 1179108139222325795L;
   private String serverMessage;
 
   public WebPortalResponse() {

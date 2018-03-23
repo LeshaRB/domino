@@ -4,9 +4,9 @@ import com.progressoft.brix.domino.api.server.response.ResponseContext;
 import com.progressoft.brix.domino.api.shared.request.ResponseBean;
 import java.util.HashMap;
 import java.util.Map;
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 
-@Log4j2
+@Slf4j
 public class SpringResponseContext<S extends ResponseBean> implements ResponseContext<S> {
 
   private Map<String, String> headers = new HashMap<>();
