@@ -10,8 +10,8 @@ dependencies {
   compileOnly("com.google.gwt:gwt-user:$gwtVersion")
 
   // GMD framework
-  compileOnly("com.github.gwtmaterialdesign:gwt-material:$gwtMaterialVersion")
-  compileOnly("com.github.gwtmaterialdesign:gwt-material-addins:$gwtMaterialAddinsVersion")
+  compile("com.github.gwtmaterialdesign:gwt-material:$gwtMaterialVersion")
+  compile("com.github.gwtmaterialdesign:gwt-material-addins:$gwtMaterialAddinsVersion")
 
   // Domino framework
   compileOnly("com.progressoft.brix.domino.logging:domino-gwt-logger:$dominoVersion")

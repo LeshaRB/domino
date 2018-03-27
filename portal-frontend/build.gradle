@@ -3,6 +3,8 @@ apply from: "$rootDir/gradle/gwt.gradle"
 dependencies {
   compile project(":web-portal-frontend")
   compile project(":web-portal-frontend-ui")
+  compile project(path: ":web-portal-frontend", configuration: "archives")
+  compile project(path: ":web-portal-frontend-ui", configuration: "archives")
 
   // GWT framework
   compileOnly("com.google.gwt:gwt-user:$gwtVersion")
