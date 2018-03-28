@@ -3,10 +3,17 @@ def generatedDir = new File(buildDir, "generated/source")
 apply plugin: "java"
 
 sourceSets {
-  main.java.srcDirs = ["$generatedDir/main", "src/main/java"]
-  main.resources.srcDir "src/main/resources"
-  test.java.srcDirs = ["$generatedDir/test", "src/test/java"]
-  test.resources.srcDir "src/test/resources"
+  generated {
+    java.srcDirs = ["$generatedDir/main", "$generatedDir/test"]
+  }
+  main {
+    java.srcDirs = ["$generatedDir/main", "src/main/java"]
+    resources.srcDirs = ["src/main/resources"]
+  }
+  test {
+    java.srcDirs = ["$generatedDir/test", "src/test/java"]
+    resources.srcDirs = ["src/test/resources"]
+  }
 }
 
 compileJava {
@@ -17,6 +24,5 @@ compileJava {
   dependsOn(processResources)
 }
 
-test {
-  systemProperties = System.properties
+jar {
 }

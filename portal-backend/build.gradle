@@ -20,7 +20,7 @@ dependencies {
   compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.logging:domino-remote-logging:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.logging:domino-log4j-server-logging:$dominoVersion")
-//  compileOnly("com.progressoft.brix.domino.sample:todolist-items-backend:1.0-SNAPSHOT")
+  //  compileOnly("com.progressoft.brix.domino.sample:todolist-items-backend:1.0-SNAPSHOT")
 
   // Spring framework
   compileOnly("org.springframework.boot:spring-boot-configuration-processor")
@@ -40,6 +40,6 @@ jar {
   dependsOn(":portal-frontend:compileGwt")
   into("static") {
     from(":portal-frontend:compileGwt:buildDir")
-//    from compileGwt.buildDir
+    //from compileGwt.buildDir
   }
 }
