@@ -10,6 +10,6 @@ public interface WebPortalBundle extends ClientBundle {
 
   interface Style extends CssResource {
 
-    //    String WebPortal();
+    String webPortal();
   }
 }

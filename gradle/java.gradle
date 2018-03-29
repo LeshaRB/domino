@@ -1,18 +1,23 @@
-def generatedDir = new File(buildDir, "generated/source")
+def generatedDir = new File(buildDir, "generated/source/apt")
 
 apply plugin: "java"
 
 sourceSets {
-  generated {
-    java.srcDirs = ["$generatedDir/main", "$generatedDir/test"]
-  }
   main {
-    java.srcDirs = ["$generatedDir/main", "src/main/java"]
-    resources.srcDirs = ["src/main/resources"]
+    java {
+      srcDirs = ["$generatedDir/main", "src/main/java"]
+    }
+    resources {
+      srcDirs = ["src/main/resources"]
+    }
   }
   test {
-    java.srcDirs = ["$generatedDir/test", "src/test/java"]
-    resources.srcDirs = ["src/test/resources"]
+    java {
+      srcDirs = ["$generatedDir/test", "src/test/java"]
+    }
+    resources {
+      srcDirs = ["src/test/resources"]
+    }
   }
 }
 
@@ -24,5 +29,38 @@ compileJava {
   dependsOn(processResources)
 }
 
-jar {
+task sourceSetJavaProperties {
+  sourceSets {
+    main {
+      println "====================================="
+      println "========== ${project.name} =========="
+      println "====================================="
+      println "java.srcDirs = ${java.srcDirs}"
+      println "resources.srcDirs = ${resources.srcDirs}"
+      println "java.files = ${java.files.name}"
+      println "allJava.files = ${allJava.files.name}"
+      println "resources.files = ${resources.files.name}"
+      println "allSource.files = ${allSource.files.name}"
+      println "output.classesDir = ${output.classesDir}"
+      println "output.resourcesDir = ${output.resourcesDir}"
+      println "output.files = ${output.files} "
+    }
+  }
 }
+
+jar {
+  from sourceSets.main.allSource
+}
+
+//afterEvaluate {
+//  if (tasks.findByName("classes")) {
+//    task sourcesJar(type: Jar, dependsOn: classes) {
+//      classifier = 'sources'
+//      from sourceSets.main.allSource
+//      from sourceSets.generated.allSource
+//    }
+//    artifacts {
+//      archives sourcesJar
+//    }
+//  }
+//}

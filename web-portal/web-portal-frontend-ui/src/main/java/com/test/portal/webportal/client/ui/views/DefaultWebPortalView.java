@@ -23,6 +23,11 @@ public class DefaultWebPortalView extends Composite implements WebPortalView {
     mainDiv.setInnerHTML("<h1>Hello world!</h1>");
     Document.get()
         .getBody()
+        .getStyle()
+        .setBackgroundColor(Bundle.INSTANCE.style()
+            .webPortal());
+    Document.get()
+        .getBody()
         .appendChild(mainDiv);
   }
 

@@ -9,6 +9,10 @@ version '1.0-SNAPSHOT'
 
 allprojects {
   apply plugin: 'net.ltgt.apt-idea'
+
+  apply from: "$rootDir/gradle/versions.gradle"
+  apply from: "$rootDir/gradle/java.gradle"
+  apply from: "$rootDir/gradle/codeQuality.gradle"
 }
 
 subprojects {
@@ -17,10 +21,6 @@ subprojects {
     mavenLocal()
     jcenter()
   }
-
-  apply from: "$rootDir/gradle/versions.gradle"
-  apply from: "$rootDir/gradle/java.gradle"
-  apply from: "$rootDir/gradle/codeQuality.gradle"
 
   dependencies {
     // Test
