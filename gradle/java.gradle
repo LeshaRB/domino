@@ -29,6 +29,11 @@ compileJava {
   dependsOn(processResources)
 }
 
+jar {
+  from sourceSets.main.allSource
+}
+
+/*
 task sourceSetJavaProperties {
   sourceSets {
     main {
@@ -47,10 +52,7 @@ task sourceSetJavaProperties {
     }
   }
 }
-
-jar {
-  from sourceSets.main.allSource
-}
+*/
 
 //afterEvaluate {
 //  if (tasks.findByName("classes")) {

@@ -17,13 +17,6 @@ dependencies {
   annotationProcessor("com.progressoft.brix.domino.impl:domino-gwt:$dominoVersion")
 }
 
-compileGwt {
-  classpath {
-    [
-        sourceSets.main.java.srcDirs,           // Java source
-        sourceSets.main.output.resourcesDir,    // Generated resources
-        sourceSets.main.java.outputDir,         // Generated classes
-        sourceSets.main.compileClasspath,       // Deps
-    ]
-  }
+jar {
+  dependsOn compileGwt
 }

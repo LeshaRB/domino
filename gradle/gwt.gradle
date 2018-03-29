@@ -16,7 +16,7 @@ task compileGwt(dependsOn: classes, type: JavaExec) {
     [
         sourceSets.main.java.srcDirs,           // Java source
         sourceSets.main.output.resourcesDir,    // Generated resources
-        sourceSets.main.output.classesDir,      // Generated classes
+        sourceSets.main.java.outputDir,         // Generated classes
         sourceSets.main.compileClasspath,       // Deps
     ]
   }
