@@ -37,32 +37,49 @@ jar {
 task sourceSetJavaProperties {
   sourceSets {
     main {
-      println "====================================="
       println "========== ${project.name} =========="
-      println "====================================="
-      println "java.srcDirs = ${java.srcDirs}"
-      println "resources.srcDirs = ${resources.srcDirs}"
-      println "java.files = ${java.files.name}"
-      println "allJava.files = ${allJava.files.name}"
-      println "resources.files = ${resources.files.name}"
-      println "allSource.files = ${allSource.files.name}"
-      println "output.classesDir = ${output.classesDir}"
-      println "output.resourcesDir = ${output.resourcesDir}"
-      println "output.files = ${output.files} "
+      println "***** java.srcDirs = "
+      getPathInfo(java.srcDirs, false)
+      println "***** resources.srcDirs = "
+      getPathInfo(resources.srcDirs, false)
+      println "***** java.files = "
+      getPathInfo(java.files, true)
+      println "***** allJava.files = "
+      getPathInfo(allJava.files, true)
+      println "***** resources.files = "
+      getPathInfo(resources.files, true)
+      println "***** allSource.files = "
+      getPathInfo(allSource.files, true)
+      println "***** output.classesDir = ${output.classesDir}"
+      println "***** output.resourcesDir = ${output.resourcesDir}"
+      println "***** output.files = ${output.files}"
+      getPathInfo(output.files, false)
     }
   }
 }
 */
 
-//afterEvaluate {
-//  if (tasks.findByName("classes")) {
-//    task sourcesJar(type: Jar, dependsOn: classes) {
-//      classifier = 'sources'
-//      from sourceSets.main.allSource
-//      from sourceSets.generated.allSource
-//    }
-//    artifacts {
-//      archives sourcesJar
-//    }
-//  }
-//}
+/*
+def getPathInfo(Set<File> fileSet, boolean name) {
+  if (name) {
+    fileSet.each { file -> println "*** " + file.name }
+  } else {
+    fileSet.each { file -> println "*** " + file }
+  }
+}
+*/
+
+/*
+afterEvaluate {
+  if (tasks.findByName("classes")) {
+    task sourcesJar(type: Jar, dependsOn: classes) {
+      classifier = 'sources'
+      from sourceSets.main.allSource
+      from sourceSets.generated.allSource
+    }
+    artifacts {
+      archives sourcesJar
+    }
+  }
+}
+*/

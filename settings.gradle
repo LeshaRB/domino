@@ -1,3 +1,5 @@
+rootProject.name = "webportal"
+
 include "portal-backend"
 include "portal-frontend"
 
@@ -5,3 +7,10 @@ file("web-portal").eachDir { dir ->
   include dir.name
   project(":${dir.name}").projectDir = dir
 }
+
+//Rename subprojects
+//prefixProjectName(rootProject, "sdi-")
+//def prefixProjectName(project, prefix) {
+//  project.name = prefix + project.name
+//  project.children.each { prefixProjectName(it, prefix) }
+//}

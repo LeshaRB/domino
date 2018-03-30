@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--<module rename-to="portal-frontend">-->
-<module>
+<module rename-to="portalFrontend">
   <inherits name='com.test.portal.AppClientModule'/>
 
   <set-property name="gwt.logging.logLevel" value="FINE"/>

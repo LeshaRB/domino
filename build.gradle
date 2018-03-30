@@ -4,11 +4,11 @@ plugins {
 
 apply from: "$rootDir/gradle/idea.gradle"
 
-group 'com.test.portal'
-version '1.0-SNAPSHOT'
+group "com.test.portal"
+version "1.0-SNAPSHOT"
 
 allprojects {
-  apply plugin: 'net.ltgt.apt-idea'
+  apply plugin: "net.ltgt.apt-idea"
 
   apply from: "$rootDir/gradle/versions.gradle"
   apply from: "$rootDir/gradle/java.gradle"
@@ -43,6 +43,6 @@ subprojects {
   }
 }
 
-task wrapper(type: Wrapper) {
-  gradleVersion = "$gradleVersion"
+project(":portal-frontend") {
+  apply from: "$rootDir/gradle/gwt.gradle"
 }

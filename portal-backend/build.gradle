@@ -9,7 +9,7 @@ dependencies {
   compile project(":web-portal-backend")
 
   // Other
-  // https://github.com/vert-x3/vertx-codegen/issues/134
+  //https://github.com/vert-x3/vertx-codegen/issues/134
   compileOnly("io.vertx:vertx-web:$vertxwebVersion")
   compileOnly("javax.ws.rs:javax.ws.rs-api:$wsrsapiVersion")
 
@@ -21,12 +21,12 @@ dependencies {
   compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.logging:domino-remote-logging:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.logging:domino-log4j-server-logging:$dominoVersion")
-  //  compileOnly("com.progressoft.brix.domino.sample:todolist-items-backend:1.0-SNAPSHOT")
+  //compileOnly("com.progressoft.brix.domino.sample:todolist-items-backend:1.0-SNAPSHOT")
 
   // Spring framework
   compileOnly("org.springframework.boot:spring-boot-configuration-processor")
-  compile("org.springframework.boot:spring-boot-starter-jetty")
-  compile("org.springframework.boot:spring-boot-starter-web") {
+  compileOnly("org.springframework.boot:spring-boot-starter-jetty")
+  compileOnly("org.springframework.boot:spring-boot-starter-web") {
     exclude module: "spring-boot-starter-tomcat"
   }
 
@@ -38,12 +38,14 @@ dependencies {
 }
 
 jar {
-  println "---"
-  println project(":portal-frontend").getTasks()
-  //.getByName("compileGwt").buildDir
-//  dependsOn(":portal-frontend:compileGwt")
-  into("app") {
-    //from(project(":portal-frontend").getTasks().getByName("compileGwt").buildDir)
-// from compileGwt.buildDir
+  dependsOn(":portal-frontend:compileGwt")
+  into("static") {
+////    println project(":portal-frontend").tasks.findByName("compileGwt").buildDir
+////    from project(":portal-frontend").tasks.findByName("compileGwt").buildDir
+    println "${buildDir}/resources/main"
+    File file = file("${buildDir}/resources/main")
+    println file.listFiles()
+    from "${buildDir}/resources/main"
   }
+  from zipTree("${buildDir}/resources")
 }
