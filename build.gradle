@@ -7,10 +7,12 @@ apply from: "$rootDir/gradle/idea.gradle"
 group "com.test.portal"
 version "1.0-SNAPSHOT"
 
+apply from: "$rootDir/gradle/versions.gradle"
+apply from: "$rootDir/gradle/options.gradle"
+
 allprojects {
   apply plugin: "net.ltgt.apt-idea"
 
-  apply from: "$rootDir/gradle/versions.gradle"
   apply from: "$rootDir/gradle/java.gradle"
   apply from: "$rootDir/gradle/codeQuality.gradle"
 }

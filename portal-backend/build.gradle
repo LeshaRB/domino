@@ -25,8 +25,8 @@ dependencies {
 
   // Spring framework
   compileOnly("org.springframework.boot:spring-boot-configuration-processor")
-  compileOnly("org.springframework.boot:spring-boot-starter-jetty")
-  compileOnly("org.springframework.boot:spring-boot-starter-web") {
+  compile("org.springframework.boot:spring-boot-starter-jetty")
+  compile("org.springframework.boot:spring-boot-starter-web") {
     exclude module: "spring-boot-starter-tomcat"
   }
 
@@ -37,15 +37,12 @@ dependencies {
   testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
-jar {
+
+bootJar {
+  // archiveName = "project.jar"
   dependsOn(":portal-frontend:compileGwt")
-  into("static") {
-////    println project(":portal-frontend").tasks.findByName("compileGwt").buildDir
-////    from project(":portal-frontend").tasks.findByName("compileGwt").buildDir
-    println "${buildDir}/resources/main"
-    File file = file("${buildDir}/resources/main")
-    println file.listFiles()
-    from "${buildDir}/resources/main"
+
+  into('BOOT-INF/classes/static') {
+    from buildDirGwt
   }
-  from zipTree("${buildDir}/resources")
 }

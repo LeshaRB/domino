@@ -1,0 +1,7 @@
+Project protalForntEnd = project(":portal-frontend")
+
+ext {
+  //GWT build dir
+  buildDirGwt = "${protalForntEnd.buildDir}/gwt"
+  extraDirGwt = "${protalForntEnd.buildDir}/extra"
+}

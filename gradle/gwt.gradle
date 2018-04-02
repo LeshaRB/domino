@@ -1,7 +1,4 @@
 task compileGwt(dependsOn: classes, type: JavaExec) {
-  ext.buildDir = "${project.buildDir}/gwt"
-  ext.extraDir = "${project.buildDir}/extra"
-
   inputs.file sourceSets.main.java.srcDirs
   inputs.dir sourceSets.main.output.resourcesDir
   outputs.dir buildDir
@@ -25,11 +22,11 @@ task compileGwt(dependsOn: classes, type: JavaExec) {
     println "Run developer mode"
     args = [
         "com.test.portal.AppClientModuleDev",
-        "-war", buildDir,
+        "-war", buildDirGwt,
         "-logLevel", "INFO",
         "-localWorkers", "4",
         "-compileReport",
-        "-extra", extraDir,
+        "-extra", extraDirGwt,
         "-style", "DETAILED",
         "-optimize", "0" // 0=none, 9=max
     ]
@@ -37,11 +34,11 @@ task compileGwt(dependsOn: classes, type: JavaExec) {
     println "Run production mode"
     args = [
         "com.test.portal.AppClientModule",
-        "-war", buildDir,
+        "-war", buildDirGwt,
         "-logLevel", "INFO",
         "-localWorkers", "4",
         "-compileReport",
-        "-extra", extraDir,
+        "-extra", extraDirGwt,
         "-style", "OBFUSCATED",
         "-optimize", "9" // 0=none, 9=max
     ]
