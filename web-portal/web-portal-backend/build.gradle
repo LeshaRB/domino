@@ -1,14 +1,17 @@
 dependencies {
   compile project(":web-portal-shared")
 
-  // Other
+  // Domino framework
+  compileOnly("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
+  // compileOnly("com.progressoft.brix.domino.apt:apt-server:$dominoVersion")
+  annotationProcessor("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
+  // annotationProcessor("com.progressoft.brix.domino.apt:apt-server:$dominoVersion")
+
+  // AutoService
   compileOnly("com.google.auto.service:auto-service:$autoServiceVersion")
   annotationProcessor("com.google.auto.service:auto-service:$autoServiceVersion")
 
-  // Domino framework
-  compileOnly("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
-  compileOnly("com.progressoft.brix.domino.apt:apt-server:$dominoVersion")
-
-  testCompileOnly("com.progressoft.brix.domino.test:domino-server-test:$dominoVersion")
-  testAnnotationProcessor("com.progressoft.brix.domino.test:domino-server-test:$dominoVersion")
+  // Test
+  // testCompileOnly("com.progressoft.brix.domino.test:domino-server-test:$dominoVersion")
+  // testAnnotationProcessor("com.progressoft.brix.domino.test:domino-server-test:$dominoVersion")
 }

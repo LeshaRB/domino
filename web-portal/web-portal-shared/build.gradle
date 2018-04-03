@@ -1,3 +1,5 @@
 dependencies {
-  compileOnly("com.progressoft.brix.domino.api:domino-api-shared:$dominoVersion")
+  // Domino framework
+  compile("com.progressoft.brix.domino.api:domino-api-shared:$dominoVersion")
+  annotationProcessor("com.progressoft.brix.domino.api:domino-api-shared:$dominoVersion")
 }

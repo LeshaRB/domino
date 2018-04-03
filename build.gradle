@@ -2,11 +2,10 @@ plugins {
   id "net.ltgt.apt" version "0.15"
 }
 
-apply from: "$rootDir/gradle/idea.gradle"
-
 group "com.test.portal"
 version "1.0-SNAPSHOT"
 
+apply from: "$rootDir/gradle/idea.gradle"
 apply from: "$rootDir/gradle/versions.gradle"
 apply from: "$rootDir/gradle/options.gradle"
 
@@ -43,8 +42,4 @@ subprojects {
       test.enabled = false
     }
   }
-}
-
-project(":portal-frontend") {
-  apply from: "$rootDir/gradle/gwt.gradle"
 }

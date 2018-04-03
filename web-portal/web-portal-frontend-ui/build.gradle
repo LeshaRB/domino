@@ -2,13 +2,6 @@ dependencies {
   compile project(":web-portal-frontend")
   compile project(":web-portal-shared")
 
-  // Other
-  compileOnly("com.google.auto.service:auto-service:$autoServiceVersion")
-  annotationProcessor("com.google.auto.service:auto-service:$autoServiceVersion")
-
-  // GWT framework
-  compileOnly("com.google.gwt:gwt-user:$gwtVersion")
-
   // GMD framework
   compile("com.github.gwtmaterialdesign:gwt-material:$gwtMaterialVersion")
   compile("com.github.gwtmaterialdesign:gwt-material-addins:$gwtMaterialAddinsVersion")
@@ -16,11 +9,19 @@ dependencies {
   // Domino framework
   compileOnly("com.progressoft.brix.domino.logging:domino-gwt-logger:$dominoVersion")
   compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
+  compileOnly("com.progressoft.brix.domino.impl:domino-gwt:$dominoVersion")
   annotationProcessor("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
-  annotationProcessor("com.progressoft.brix.domino.apt:apt-client:$dominoVersion")
   annotationProcessor("com.progressoft.brix.domino.impl:domino-gwt:$dominoVersion")
+  annotationProcessor("com.progressoft.brix.domino.apt:apt-client:$dominoVersion")
 
+  // AutoServiceWebPortalHandler.
+  compileOnly("com.google.auto.service:auto-service:$autoServiceVersion")
+  annotationProcessor("com.google.auto.service:auto-service:$autoServiceVersion")
+
+  // Test
   testCompile("com.google.gwt.gwtmockito:gwtmockito:$gwtmockitoVersion")
+
+  // Domino Test
   testCompile("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
   testAnnotationProcessor("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
 }
