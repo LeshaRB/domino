@@ -5,6 +5,7 @@ dependencies {
   // GMD framework
   compile("com.github.gwtmaterialdesign:gwt-material:$gwtMaterialVersion")
   compile("com.github.gwtmaterialdesign:gwt-material-addins:$gwtMaterialAddinsVersion")
+  compile("com.github.gwtmaterialdesign:gwt-material-themes:$gwtMaterialThemesVersion")
 
   // Domino framework
   compileOnly("com.progressoft.brix.domino.logging:domino-gwt-logger:$dominoVersion")

@@ -4,6 +4,8 @@
   <inherits name="com.google.gwt.user.theme.clean.Clean"/>
   <inherits name="gwt.material.design.GwtMaterialWithJQuery"/>
   <inherits name="gwt.material.design.addins.GwtMaterialAddins"/>
+  <inherits name="gwt.material.design.GwtMaterialDesignBasic"/>
+  <inherits name="gwt.material.design.themes.ThemeGreyResources"/>
 
   <inherits name="com.progressoft.brix.domino.api.Domino"/>
   <inherits name="com.progressoft.brix.domino.logger.Logging"/>
