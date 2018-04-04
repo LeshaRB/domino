@@ -41,9 +41,6 @@
 
   <!--<inherits name="com.google.gwt.resources.Resources"/>-->
 
-  <!--<set-configuration-property name="CssResource.enableGss" value="true"/>-->
-  <!--<set-configuration-property name="CssResource.conversionMode" value="strict"/>-->
-
   <!--<inherits name="com.google.gwt.core.StackTrace"/>-->
   <!--<set-property name="compiler.stackMode" value="native"/>-->
 </module>

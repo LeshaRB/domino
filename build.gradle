@@ -10,6 +10,7 @@ apply from: "$rootDir/gradle/versions.gradle"
 apply from: "$rootDir/gradle/options.gradle"
 
 allprojects {
+  apply plugin: "net.ltgt.apt"
   apply plugin: "net.ltgt.apt-idea"
 
   apply from: "$rootDir/gradle/java.gradle"

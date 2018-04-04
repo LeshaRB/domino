@@ -15,13 +15,13 @@ import org.junit.runner.RunWith;
 @WithClassesToStub(RootPanel.class)
 public class WebPortalClientModuleTest {
 
-  //  private WebPortalPresenterSpy presenterSpy;
-  //  private WebPortalViewSpy viewSpy;
+  private WebPortalPresenterSpy presenterSpy;
+  private WebPortalViewSpy viewSpy;
 
   @Before
   public void setUp() {
-    WebPortalPresenterSpy presenterSpy = new WebPortalPresenterSpy();
-    WebPortalViewSpy viewSpy = new WebPortalViewSpy();
+    presenterSpy = new WebPortalPresenterSpy();
+    viewSpy = new WebPortalViewSpy();
     DominoTestClient.useModules(new WebPortalModuleConfiguration(), new WebPortalUIModuleConfiguration())
         .replacePresenter(WebPortalPresenter.class, presenterSpy)
         .replaceView(WebPortalPresenter.class, viewSpy)
@@ -30,6 +30,7 @@ public class WebPortalClientModuleTest {
 
   @Test
   public void nothing() throws Exception {
-
+    viewSpy.testView("TEST View");
+    presenterSpy.onTestShow("TEST Presenter");
   }
 }
