@@ -2,8 +2,8 @@ package com.test.portal.webportal.client.presenters.home;
 
 import com.progressoft.brix.domino.api.client.annotations.InjectContext;
 import com.progressoft.brix.domino.api.client.mvp.presenter.Presentable;
-import com.progressoft.brix.domino.api.shared.extension.MainExtensionPoint;
 import com.test.portal.webportal.shared.extension.WebPortalContext;
+import com.test.portal.webportal.shared.extension.WebPortalExtensionPoint;
 
 /**
  * IHomeWebPortalPresenter.
@@ -13,6 +13,6 @@ import com.test.portal.webportal.shared.extension.WebPortalContext;
  */
 public interface IHomeWebPortalPresenter extends Presentable {
 
-  @InjectContext(extensionPoint = MainExtensionPoint.class)
+  @InjectContext(extensionPoint = WebPortalExtensionPoint.class)
   void contributeToMainModule(WebPortalContext context);
 }

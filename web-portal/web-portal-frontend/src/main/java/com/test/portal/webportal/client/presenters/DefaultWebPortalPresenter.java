@@ -8,6 +8,7 @@ import com.progressoft.brix.domino.api.shared.extension.MainContext;
 import com.test.portal.webportal.client.views.WebPortalView;
 import com.test.portal.webportal.client.views.WebPortalView.WebPortalUiHandlers;
 import com.test.portal.webportal.shared.extension.WebPortalContext;
+import com.test.portal.webportal.shared.extension.WebPortalExtensionPoint;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,6 +29,7 @@ public class DefaultWebPortalPresenter extends BaseClientPresenter<WebPortalView
         .append("---");
     LOGGER.info("onTestShow " + sb.toString());
     view.testView(sb.toString());
+    applyContributions(WebPortalExtensionPoint.class, () -> DefaultWebPortalPresenter.this);
   }
 
   @Override
@@ -43,4 +45,5 @@ public class DefaultWebPortalPresenter extends BaseClientPresenter<WebPortalView
     view.setContent(content);
     LOGGER.info("Layout - setting main content.");
   }
+
 }

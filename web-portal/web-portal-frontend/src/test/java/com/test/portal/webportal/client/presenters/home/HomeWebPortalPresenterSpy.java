@@ -1,6 +1,6 @@
 package com.test.portal.webportal.client.presenters.home;
 
-import com.progressoft.brix.domino.api.shared.extension.MainContext;
+import com.test.portal.webportal.shared.extension.WebPortalContext;
 
 /**
  * HomeWebPortalPresenterSpy.
@@ -10,16 +10,16 @@ import com.progressoft.brix.domino.api.shared.extension.MainContext;
  */
 public class HomeWebPortalPresenterSpy extends HomeWebPortalPresenter {
 
-  private MainContext mainContext;
+  private WebPortalContext webPortalContext;
 
   @Override
-  public void contributeToMainModule(MainContext context) {
+  public void contributeToMainModule(WebPortalContext context) {
     super.contributeToMainModule(context);
-    this.mainContext = context;
+    this.webPortalContext = context;
   }
 
-  public MainContext getMainContext() {
-    return mainContext;
+  public WebPortalContext getWebPortalContext() {
+    return webPortalContext;
   }
 
   @Override
