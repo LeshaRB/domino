@@ -4,6 +4,8 @@
   <ui:style gss="true">
     .sample-div {
       background-color: #CECECE;
+      width: 100%;
+      height: 100%;
     }
   </ui:style>
 
@@ -13,5 +15,7 @@
     <!--<div class="{bundle.style.webPortal}" ui:field="testDiv"/>-->
 
     <m:MaterialButton text="Push Me" ui:field="btnPushMe"/>
+
+    <m:MaterialPanel class="sample-div" ui:field="mainContent"/>
   </m:MaterialPanel>
 </ui:UiBinder>

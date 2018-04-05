@@ -41,6 +41,11 @@ public class HomeWebPortalView extends Composite implements IHomeWebPortalView {
     initWidget(ourUiBinder.createAndBindUi(this));
   }
 
+  @Override
+  public WebPortalContent getContent() {
+    return this;
+  }
+
   interface HomeWebPortalViewUiBinder extends UiBinder<MaterialPanel, HomeWebPortalView> {
 
   }

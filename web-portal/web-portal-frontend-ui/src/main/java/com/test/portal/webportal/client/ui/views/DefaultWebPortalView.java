@@ -12,10 +12,12 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.progressoft.brix.domino.api.client.annotations.UiView;
 import com.test.portal.webportal.client.presenters.WebPortalPresenter;
 import com.test.portal.webportal.client.views.WebPortalView;
+import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalContent;
 import gwt.material.design.client.ui.MaterialButton;
 import gwt.material.design.client.ui.MaterialPanel;
 import gwt.material.design.client.ui.MaterialToast;
 import java.util.Date;
+import jsinterop.base.Js;
 
 @UiView(presentable = WebPortalPresenter.class)
 public class DefaultWebPortalView extends Composite implements WebPortalView {
@@ -28,11 +30,15 @@ public class DefaultWebPortalView extends Composite implements WebPortalView {
   @UiField
   MaterialButton btnPushMe;
 
+  @UiField
+  MaterialPanel mainContent;
+
   private WebPortalUiHandlers uiHandlers;
 
   public DefaultWebPortalView() {
     initWidget(ourUiBinder.createAndBindUi(this));
-    RootPanel.get().add(this);
+    RootPanel.get()
+        .add(this);
     //    mainDiv.setInnerHTML("<h1>Hello world!</h1>");
     //    Document.get()
     //        .getBody()
@@ -45,6 +51,12 @@ public class DefaultWebPortalView extends Composite implements WebPortalView {
   @Override
   public void testView(String text) {
     MaterialToast.fireToast(text);
+  }
+
+  @Override
+  public void setContent(WebPortalContent content) {
+    mainContent.clear();
+    mainContent.add(Js.cast(content.get()));
   }
 
   @UiHandler("btnPushMe")

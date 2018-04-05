@@ -25,6 +25,8 @@
 
     <m:MaterialContainer height="1600px" paddingTop="200">
       <m:MaterialRow textAlign="CENTER" paddingTop="40">
+        <!--<m:MaterialContainer ui:field="mainContent">-->
+        <!--</m:MaterialContainer>-->
         <m:MaterialImage url="http://i.imgur.com/7JpG0F4.gif"/>
       </m:MaterialRow>
       <m:MaterialFAB ui:field="fab">
