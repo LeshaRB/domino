@@ -4,10 +4,18 @@ import com.progressoft.brix.domino.api.shared.extension.Context;
 
 public interface WebPortalContext extends Context {
 
-  void setContent(WebPortalContent content);
+  void setContentMain(WebPortalMainContent content);
+
+  void setContentLoading(WebPortalLoadingContent content);
 
   @FunctionalInterface
-  interface WebPortalContent<T> {
+  interface WebPortalMainContent<T> {
+
+    T get();
+  }
+
+  @FunctionalInterface
+  interface WebPortalLoadingContent<T> {
 
     T get();
   }

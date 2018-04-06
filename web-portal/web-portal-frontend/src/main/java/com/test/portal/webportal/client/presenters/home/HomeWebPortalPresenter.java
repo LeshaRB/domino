@@ -22,7 +22,7 @@ public class HomeWebPortalPresenter extends BaseClientPresenter<IHomeWebPortalVi
 
   @Override
   public void contributeToMainModule(WebPortalContext context) {
-    context.setContent(view.getContent());
+    context.setContentMain(view.getContent());
     LOGGER.info("Main context received at presenter " + HomeWebPortalPresenter.class.getSimpleName());
   }
 

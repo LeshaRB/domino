@@ -12,9 +12,12 @@ import com.test.portal.webportal.client.presenters.WebPortalPresenter;
 import com.test.portal.webportal.client.presenters.WebPortalPresenterSpy;
 import com.test.portal.webportal.client.presenters.home.HomeWebPortalPresenterSpy;
 import com.test.portal.webportal.client.presenters.home.IHomeWebPortalPresenter;
+import com.test.portal.webportal.client.presenters.loading.ILoadingWebPortalPresenter;
+import com.test.portal.webportal.client.presenters.loading.LoadinWebPortalPresenterSpy;
 import com.test.portal.webportal.client.requests.WebPortalServerRequest;
 import com.test.portal.webportal.client.views.FakeWebPortalView;
 import com.test.portal.webportal.client.views.home.FakeHomeWebPortalView;
+import com.test.portal.webportal.client.views.loading.FakeLoadingWebPortalView;
 import com.test.portal.webportal.shared.request.WebPortalRequest;
 import com.test.portal.webportal.shared.response.WebPortalResponse;
 import org.junit.Before;
@@ -28,9 +31,11 @@ public class WebPortalClientModuleTest {
 
   private WebPortalPresenterSpy presenterSpy;
   private HomeWebPortalPresenterSpy homeWebPortalPresenterSpy;
+  private LoadinWebPortalPresenterSpy loadinWebPortalPresenterSpy;
 
   private FakeWebPortalView fakeView;
   private FakeHomeWebPortalView fakeHomeWebPortalView;
+  private FakeLoadingWebPortalView fakeLoadingWebPortalView;
 
   private ClientContext clientContext;
 
@@ -38,6 +43,7 @@ public class WebPortalClientModuleTest {
   public void setUp() {
     presenterSpy = new WebPortalPresenterSpy();
     homeWebPortalPresenterSpy = new HomeWebPortalPresenterSpy();
+    loadinWebPortalPresenterSpy = new LoadinWebPortalPresenterSpy();
 
     DominoTestClient.useModules(new WebPortalModuleConfiguration(), new TestWebPortalModuleConfiguration())
         .replacePresenter(WebPortalPresenter.class, presenterSpy)
@@ -49,9 +55,15 @@ public class WebPortalClientModuleTest {
         .viewOf(IHomeWebPortalPresenter.class, view -> fakeHomeWebPortalView = (FakeHomeWebPortalView) view)
         .onStartCompleted(clientContext -> this.clientContext = clientContext)
         .start();
+    DominoTestClient.useModules(new WebPortalModuleConfiguration(), new TestWebPortalModuleConfiguration())
+        .replacePresenter(ILoadingWebPortalPresenter.class, loadinWebPortalPresenterSpy)
+        .viewOf(ILoadingWebPortalPresenter.class, view -> fakeLoadingWebPortalView = (FakeLoadingWebPortalView) view)
+        .onStartCompleted(clientContext -> this.clientContext = clientContext)
+        .start();
 
     assertNotNull(fakeView);
     assertNotNull(fakeHomeWebPortalView);
+    assertNotNull(fakeLoadingWebPortalView);
   }
 
   @Test

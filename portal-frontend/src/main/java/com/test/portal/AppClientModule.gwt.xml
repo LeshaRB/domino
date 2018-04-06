@@ -35,12 +35,11 @@
   </replace-with>
 
   <!--Reduce locale names support -->
-  <!--<inherits name="com.google.gwt.i18n.I18N"/>-->
-  <!--<extend-property name="locale" values="en"/>-->
-  <!--<set-property name="locale" value="en"/>-->
+  <inherits name="com.google.gwt.i18n.I18N"/>
+  <extend-property name="locale" values="en"/>
+  <set-property name="locale" value="en"/>
 
   <!--<inherits name="com.google.gwt.resources.Resources"/>-->
-
   <!--<inherits name="com.google.gwt.core.StackTrace"/>-->
   <!--<set-property name="compiler.stackMode" value="native"/>-->
 </module>

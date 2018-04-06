@@ -4,7 +4,7 @@ import com.progressoft.brix.domino.api.client.mvp.view.HasUiHandlers;
 import com.progressoft.brix.domino.api.client.mvp.view.UiHandlers;
 import com.progressoft.brix.domino.api.client.mvp.view.View;
 import com.test.portal.webportal.client.views.home.IHomeWebPortalView.HomeWebPortalUiHandlers;
-import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalContent;
+import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalMainContent;
 
 /**
  * IHomeWebPortalView.
@@ -14,7 +14,7 @@ import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalCont
  */
 public interface IHomeWebPortalView extends View, HasUiHandlers<HomeWebPortalUiHandlers> {
 
-  WebPortalContent getContent();
+  WebPortalMainContent getContent();
 
   interface HomeWebPortalUiHandlers extends UiHandlers {
 

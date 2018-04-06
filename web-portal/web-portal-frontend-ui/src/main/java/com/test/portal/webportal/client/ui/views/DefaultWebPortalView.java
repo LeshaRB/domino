@@ -12,7 +12,8 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.progressoft.brix.domino.api.client.annotations.UiView;
 import com.test.portal.webportal.client.presenters.WebPortalPresenter;
 import com.test.portal.webportal.client.views.WebPortalView;
-import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalContent;
+import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalLoadingContent;
+import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalMainContent;
 import gwt.material.design.client.ui.MaterialButton;
 import gwt.material.design.client.ui.MaterialPanel;
 import gwt.material.design.client.ui.MaterialToast;
@@ -29,7 +30,12 @@ public class DefaultWebPortalView extends Composite implements WebPortalView {
   //  DivElement testDiv;
   @UiField
   MaterialButton btnPushMe;
-
+  @UiField
+  MaterialButton btnLoadingShow;
+  @UiField
+  MaterialButton btnLoadingHide;
+  @UiField
+  MaterialPanel loadingContent;
   @UiField
   MaterialPanel mainContent;
 
@@ -54,15 +60,31 @@ public class DefaultWebPortalView extends Composite implements WebPortalView {
   }
 
   @Override
-  public void setContent(WebPortalContent content) {
+  public void setContentMain(WebPortalMainContent content) {
     mainContent.clear();
     mainContent.add(Js.cast(content.get()));
+  }
+
+  @Override
+  public void setContentLoading(WebPortalLoadingContent content) {
+    loadingContent.clear();
+    loadingContent.add(Js.cast(content.get()));
   }
 
   @UiHandler("btnPushMe")
   void handleClick(ClickEvent event) {
     DateTimeFormat dtf = DateTimeFormat.getFormat("yyyy-MM-dd HH:mm:ss");
     uiHandlers.onTestShow(dtf.format(new Date(), TimeZone.createTimeZone(0)));
+  }
+
+  @UiHandler("btnLoadingShow")
+  void handleClickLoadingShow(ClickEvent event) {
+    uiHandlers.onLoading(true);
+  }
+
+  @UiHandler("btnLoadingHide")
+  void handleClickLoadingHide(ClickEvent event) {
+    uiHandlers.onLoading(false);
   }
 
   @Override

@@ -7,7 +7,7 @@ import com.google.gwt.user.client.ui.Composite;
 import com.progressoft.brix.domino.api.client.annotations.UiView;
 import com.test.portal.webportal.client.presenters.home.IHomeWebPortalPresenter;
 import com.test.portal.webportal.client.views.home.IHomeWebPortalView;
-import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalContent;
+import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalMainContent;
 import gwt.material.design.client.ui.MaterialFAB;
 import gwt.material.design.client.ui.MaterialHeader;
 import gwt.material.design.client.ui.MaterialNavBar;
@@ -21,7 +21,7 @@ import gwt.material.design.client.ui.MaterialSideNavDrawer;
  * @since 4/4/18.
  */
 @UiView(presentable = IHomeWebPortalPresenter.class)
-public class HomeWebPortalView extends Composite implements IHomeWebPortalView, WebPortalContent<MaterialPanel> {
+public class HomeWebPortalView extends Composite implements IHomeWebPortalView, WebPortalMainContent<MaterialPanel> {
 
   private static HomeWebPortalViewUiBinder ourUiBinder = GWT.create(HomeWebPortalViewUiBinder.class);
 
@@ -45,7 +45,7 @@ public class HomeWebPortalView extends Composite implements IHomeWebPortalView, 
   }
 
   @Override
-  public WebPortalContent getContent() {
+  public WebPortalMainContent getContent() {
     return this;
   }
 
@@ -53,6 +53,7 @@ public class HomeWebPortalView extends Composite implements IHomeWebPortalView, 
   public MaterialPanel get() {
     return materialPanel;
   }
+
 
   interface HomeWebPortalViewUiBinder extends UiBinder<MaterialPanel, HomeWebPortalView> {
 

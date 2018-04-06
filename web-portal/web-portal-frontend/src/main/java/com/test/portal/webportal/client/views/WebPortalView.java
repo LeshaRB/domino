@@ -10,10 +10,14 @@ public interface WebPortalView extends View, HasUiHandlers<WebPortalUiHandlers> 
 
   void testView(String text);
 
-  void setContent(WebPortalContext.WebPortalContent content);
+  void setContentMain(WebPortalContext.WebPortalMainContent content);
+
+  void setContentLoading(WebPortalContext.WebPortalLoadingContent content);
 
   interface WebPortalUiHandlers extends UiHandlers {
 
     void onTestShow(String text);
+
+    void onLoading(boolean show);
   }
 }

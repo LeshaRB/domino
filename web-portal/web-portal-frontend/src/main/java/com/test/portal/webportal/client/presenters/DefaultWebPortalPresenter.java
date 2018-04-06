@@ -33,16 +33,30 @@ public class DefaultWebPortalPresenter extends BaseClientPresenter<WebPortalView
   }
 
   @Override
+  public void onLoading(boolean show) {
+    applyContributions(WebPortalExtensionPoint.class, () -> DefaultWebPortalPresenter.this);
+  }
+
+  @Override
   public void initView(WebPortalView view) {
     view.setUiHandlers(this);
   }
 
   @Override
-  public void setContent(WebPortalContent content) {
+  public void setContentMain(WebPortalMainContent content) {
     if (isNull(content)) {
       throw new ContentConnotBeNullException();
     }
-    view.setContent(content);
+    view.setContentMain(content);
+    LOGGER.info("Layout - setting main content.");
+  }
+
+  @Override
+  public void setContentLoading(WebPortalLoadingContent content) {
+    if (isNull(content)) {
+      throw new ContentConnotBeNullException();
+    }
+    view.setContentLoading(content);
     LOGGER.info("Layout - setting main content.");
   }
 
