@@ -33,3 +33,9 @@ dependencies {
   testAnnotationProcessor("com.progressoft.brix.domino.impl:domino-gwt:$dominoVersion")
   testAnnotationProcessor("com.progressoft.brix.domino.apt:apt-client:$dominoVersion")
 }
+
+//jar {
+//  from("$generatedDir/main") {
+//    include "**/*.java"
+//  }
+//}

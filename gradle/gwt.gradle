@@ -27,7 +27,8 @@ task compileGwt(dependsOn: classes, type: JavaExec) {
         "-localWorkers", "4",
         "-compileReport",
         "-extra", extraDirGwt,
-        "-style", "DETAILED",
+        "-style", "PRETTY",
+        "-draftCompile",
         "-optimize", "0" // 0=none, 9=max
     ]
   } else {

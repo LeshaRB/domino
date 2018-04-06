@@ -26,3 +26,4 @@ dependencies {
   testCompile("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
   testAnnotationProcessor("com.progressoft.brix.domino.test:domino-client-test:$dominoVersion")
 }
+

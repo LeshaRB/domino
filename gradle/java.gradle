@@ -1,4 +1,6 @@
-def generatedDir = new File(buildDir, "generated/source/apt")
+ext {
+  generatedDir = new File(buildDir, "generated/source/apt")
+}
 
 apply plugin: "java"
 
@@ -28,6 +30,7 @@ compileJava {
   options.compilerArgs = ["-Xlint:all"]
   dependsOn(processResources)
 }
+
 
 jar {
   from sourceSets.main.allSource
