@@ -25,6 +25,7 @@ ext {
 
   // Test
   junitVersion = "4.12"
+  slf4jVersion = "1.7.25"
   gwtmockitoVersion = "1.1.8"
   assertjcoreVersion = "3.9.1"
 }
