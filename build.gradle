@@ -47,3 +47,12 @@ subprojects {
     }
   }
 }
+
+file("web-portal").eachDir { dir ->
+  project(":${dir.name}") {
+    dependencies {
+      // Test
+      testCompile("org.slf4j:slf4j-simple:$slf4jVersion")
+    }
+  }
+}
