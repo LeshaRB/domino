@@ -1,9 +1,9 @@
 package com.test.portal.controller;
 
-import com.progressoft.brix.domino.api.server.context.DefaultExecutionContext;
-import com.progressoft.brix.domino.api.server.request.RequestContext;
-import com.progressoft.brix.domino.api.shared.request.RequestBean;
-import com.progressoft.brix.domino.api.shared.request.ResponseBean;
+import org.dominokit.domino.api.server.context.DefaultExecutionContext;
+import org.dominokit.domino.api.server.request.RequestContext;
+import org.dominokit.domino.api.shared.request.RequestBean;
+import org.dominokit.domino.api.shared.request.ResponseBean;
 
 public class SpringExecutionContext<R extends RequestBean, S extends ResponseBean> extends
     DefaultExecutionContext<R, S> {

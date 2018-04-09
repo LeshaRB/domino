@@ -1,8 +1,8 @@
 package com.test.portal.webportal.server.handlers;
 
-import com.progressoft.brix.domino.api.server.context.ExecutionContext;
-import com.progressoft.brix.domino.api.server.handler.Handler;
-import com.progressoft.brix.domino.api.server.handler.RequestHandler;
+import org.dominokit.domino.api.server.context.ExecutionContext;
+import org.dominokit.domino.api.server.handler.Handler;
+import org.dominokit.domino.api.server.handler.RequestHandler;
 import com.test.portal.webportal.shared.request.WebPortalRequest;
 import com.test.portal.webportal.shared.response.WebPortalResponse;
 import java.util.logging.Logger;

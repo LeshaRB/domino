@@ -1,8 +1,8 @@
 package com.test.portal.webportal.client.requests;
 
-import com.progressoft.brix.domino.api.client.annotations.Path;
-import com.progressoft.brix.domino.api.client.annotations.Request;
-import com.progressoft.brix.domino.api.client.request.ServerRequest;
+import org.dominokit.domino.api.client.annotations.Path;
+import org.dominokit.domino.api.client.annotations.Request;
+import org.dominokit.domino.api.client.request.ServerRequest;
 import com.test.portal.webportal.shared.request.WebPortalRequest;
 import com.test.portal.webportal.shared.response.WebPortalResponse;
 

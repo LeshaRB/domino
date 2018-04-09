@@ -10,7 +10,7 @@ checkstyle {
   ignoreFailures = false
   configFile = new File(checkstyleConfigDir, "checkstyle.xml")
   configProperties.checkstyleConfigDir = checkstyleConfigDir
-  toolVersion "8.8"
+  toolVersion "8.9"
 }
 
 checkstyleMain {
@@ -39,7 +39,7 @@ tasks.withType(FindBugs) {
 
 pmd {
   ignoreFailures = false
-  toolVersion = "6.1.0"
+  toolVersion = "6.2.0"
   sourceSets = [sourceSets.main, sourceSets.test]
   reportsDir = file("$project.buildDir/pmdReports")
   ruleSets = []

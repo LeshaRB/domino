@@ -1,6 +1,6 @@
 package com.test.portal.webportal.client.views;
 
-import com.progressoft.brix.domino.api.client.annotations.UiView;
+import org.dominokit.domino.api.client.annotations.UiView;
 import com.test.portal.webportal.client.presenters.WebPortalPresenter;
 import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalLoadingContent;
 import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalMainContent;

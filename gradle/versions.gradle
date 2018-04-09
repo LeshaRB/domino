@@ -3,7 +3,7 @@ ext {
   gradleVersion = "4.6"
 
   // Domino framework
-  dominoVersion = "1.0-rc.2"
+  dominoVersion = "1.0-rc.3-SNAPSHOT"
 
   // GWT framework
   gwtVersion = "2.8.2"

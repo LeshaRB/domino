@@ -1,6 +1,6 @@
 package com.test.portal.webportal.shared.response;
 
-import com.progressoft.brix.domino.api.shared.request.ResponseBean;
+import org.dominokit.domino.api.shared.request.ResponseBean;
 
 public class WebPortalResponse implements ResponseBean {
 

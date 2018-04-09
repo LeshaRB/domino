@@ -2,10 +2,10 @@
 <module rename-to="portalFrontend">
   <inherits name="com.google.gwt.user.User"/>
   <inherits name="com.google.gwt.user.theme.clean.Clean"/>
-  <inherits name="com.progressoft.brix.domino.logger.Logging"/>
+  <inherits name="org.dominokit.domino.logger.Logging"/>
 
-  <inherits name="com.progressoft.brix.domino.gwt.Core"/>
-  <inherits name="com.progressoft.brix.domino.api.Domino"/>
+  <inherits name="org.dominokit.domino.gwt.Core"/>
+  <inherits name="org.dominokit.domino.api.Domino"/>
 
   <inherits name="com.test.portal.webportal.client.WebPortalClientModule"/>
   <inherits name="com.test.portal.webportal.client.WebPortalUIClientModule"/>
@@ -26,7 +26,7 @@
   <set-configuration-property name="includeSourceMapUrl"
     value="static/gwt/extra/app/symbolMaps/__HASH___sourceMap__FRAGMENT__.json"/>
 
-  <replace-with class="com.progressoft.brix.domino.gwt.client.logging.RestfulRemoteLogHandler">
+  <replace-with class="org.dominokit.domino.gwt.client.logging.RestfulRemoteLogHandler">
     <when-type-is class="com.google.gwt.logging.client.SimpleRemoteLogHandler"/>
     <any>
       <when-property-is name="gwt.logging.enabled" value="TRUE"/>

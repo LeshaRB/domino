@@ -3,7 +3,7 @@ package com.test.portal.webportal.client;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwtmockito.GwtMockitoTestRunner;
 import com.google.gwtmockito.WithClassesToStub;
-import com.progressoft.brix.domino.test.api.client.DominoTestClient;
+import org.dominokit.domino.test.api.client.DominoTestClient;
 import com.test.portal.webportal.client.presenters.WebPortalPresenter;
 import com.test.portal.webportal.client.presenters.WebPortalPresenterSpy;
 import com.test.portal.webportal.client.views.WebPortalViewSpy;

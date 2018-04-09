@@ -1,10 +1,10 @@
 mvn archetype:generate \
-    -DarchetypeGroupId=com.progressoft.brix.domino.archetypes \
+    -DarchetypeGroupId=org.dominokit.domino.archetypes \
     -DarchetypeArtifactId=domino-gwt-app-archetype \
     -DarchetypeVersion=1.0-rc.2
     
 mvn archetype:generate \
-    -DarchetypeGroupId=com.progressoft.brix.domino.archetypes \
+    -DarchetypeGroupId=org.dominokit.domino.archetypes \
     -DarchetypeArtifactId=domino-material-module-archetype \
     -DarchetypeVersion=1.0-rc.2 \
     -DarchetypeParentGroupId=com.foo \

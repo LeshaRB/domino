@@ -1,6 +1,6 @@
 package com.test.portal.webportal.shared.request;
 
-import com.progressoft.brix.domino.api.shared.request.RequestBean;
+import org.dominokit.domino.api.shared.request.RequestBean;
 
 public class WebPortalRequest implements RequestBean {
 

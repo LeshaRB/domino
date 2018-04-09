@@ -9,7 +9,7 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.RootPanel;
-import com.progressoft.brix.domino.api.client.annotations.UiView;
+import org.dominokit.domino.api.client.annotations.UiView;
 import com.test.portal.webportal.client.presenters.WebPortalPresenter;
 import com.test.portal.webportal.client.views.WebPortalView;
 import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalLoadingContent;

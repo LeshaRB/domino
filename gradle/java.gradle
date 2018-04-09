@@ -31,7 +31,6 @@ compileJava {
   dependsOn(processResources)
 }
 
-
 jar {
   from sourceSets.main.allSource
 }

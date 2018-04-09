@@ -9,8 +9,8 @@ dependencies {
   compileOnly("com.google.gwt:gwt-dev:$gwtVersion")
 
   // Domino framework
-  compileOnly("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
-  compileOnly("com.progressoft.brix.domino.impl:domino-gwt:$dominoVersion")
-  annotationProcessor("com.progressoft.brix.domino.api:domino-api-client:$dominoVersion")
-  annotationProcessor("com.progressoft.brix.domino.impl:domino-gwt:$dominoVersion")
+  compileOnly("org.dominokit.domino.api:domino-api-client:$dominoVersion")
+  compileOnly("org.dominokit.domino.impl:domino-gwt:$dominoVersion")
+  annotationProcessor("org.dominokit.domino.api:domino-api-client:$dominoVersion")
+  annotationProcessor("org.dominokit.domino.impl:domino-gwt:$dominoVersion")
 }

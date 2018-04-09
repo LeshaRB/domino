@@ -1,6 +1,6 @@
 package com.test.portal.webportal.client.presenters;
 
-import com.progressoft.brix.domino.api.shared.extension.MainContext;
+import org.dominokit.domino.api.shared.extension.MainContext;
 
 public class WebPortalPresenterSpy extends DefaultWebPortalPresenter {
 

@@ -1,7 +1,7 @@
 package com.test.portal.controller;
 
-import com.progressoft.brix.domino.api.server.response.ResponseContext;
-import com.progressoft.brix.domino.api.shared.request.ResponseBean;
+import org.dominokit.domino.api.server.response.ResponseContext;
+import org.dominokit.domino.api.shared.request.ResponseBean;
 import java.util.HashMap;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;

@@ -1,7 +1,7 @@
 package com.test.portal;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.progressoft.brix.domino.api.client.ClientApp;
+import org.dominokit.domino.api.client.ClientApp;
 import java.util.logging.Logger;
 
 public class AppClientModule implements EntryPoint {

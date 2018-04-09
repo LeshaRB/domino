@@ -5,9 +5,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
 
 import com.google.gwtmockito.GwtMockitoTestRunner;
-import com.progressoft.brix.domino.api.client.annotations.ClientModule;
-import com.progressoft.brix.domino.test.api.client.ClientContext;
-import com.progressoft.brix.domino.test.api.client.DominoTestClient;
+import org.dominokit.domino.api.client.annotations.ClientModule;
+import org.dominokit.domino.test.api.client.ClientContext;
+import org.dominokit.domino.test.api.client.DominoTestClient;
 import com.test.portal.webportal.client.presenters.WebPortalPresenter;
 import com.test.portal.webportal.client.presenters.WebPortalPresenterSpy;
 import com.test.portal.webportal.client.presenters.home.HomeWebPortalPresenterSpy;

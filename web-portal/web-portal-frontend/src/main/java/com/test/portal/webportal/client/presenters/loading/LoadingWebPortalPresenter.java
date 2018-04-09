@@ -1,7 +1,7 @@
 package com.test.portal.webportal.client.presenters.loading;
 
-import com.progressoft.brix.domino.api.client.annotations.Presenter;
-import com.progressoft.brix.domino.api.client.mvp.presenter.BaseClientPresenter;
+import org.dominokit.domino.api.client.annotations.Presenter;
+import org.dominokit.domino.api.client.mvp.presenter.BaseClientPresenter;
 import com.test.portal.webportal.client.views.loading.ILoadingWebPortalView;
 import com.test.portal.webportal.client.views.loading.ILoadingWebPortalView.LoadingWebPortalUiHandlers;
 import com.test.portal.webportal.shared.extension.WebPortalContext;

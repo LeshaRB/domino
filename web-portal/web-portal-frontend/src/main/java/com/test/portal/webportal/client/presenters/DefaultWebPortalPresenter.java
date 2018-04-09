@@ -2,9 +2,9 @@ package com.test.portal.webportal.client.presenters;
 
 import static java.util.Objects.isNull;
 
-import com.progressoft.brix.domino.api.client.annotations.Presenter;
-import com.progressoft.brix.domino.api.client.mvp.presenter.BaseClientPresenter;
-import com.progressoft.brix.domino.api.shared.extension.MainContext;
+import org.dominokit.domino.api.client.annotations.Presenter;
+import org.dominokit.domino.api.client.mvp.presenter.BaseClientPresenter;
+import org.dominokit.domino.api.shared.extension.MainContext;
 import com.test.portal.webportal.client.views.WebPortalView;
 import com.test.portal.webportal.client.views.WebPortalView.WebPortalUiHandlers;
 import com.test.portal.webportal.shared.extension.WebPortalContext;

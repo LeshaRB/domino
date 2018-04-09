@@ -1,8 +1,8 @@
 package com.test.portal.webportal.client.views.home;
 
-import com.progressoft.brix.domino.api.client.mvp.view.HasUiHandlers;
-import com.progressoft.brix.domino.api.client.mvp.view.UiHandlers;
-import com.progressoft.brix.domino.api.client.mvp.view.View;
+import org.dominokit.domino.api.client.mvp.view.HasUiHandlers;
+import org.dominokit.domino.api.client.mvp.view.UiHandlers;
+import org.dominokit.domino.api.client.mvp.view.View;
 import com.test.portal.webportal.client.views.home.IHomeWebPortalView.HomeWebPortalUiHandlers;
 import com.test.portal.webportal.shared.extension.WebPortalContext.WebPortalMainContent;
 

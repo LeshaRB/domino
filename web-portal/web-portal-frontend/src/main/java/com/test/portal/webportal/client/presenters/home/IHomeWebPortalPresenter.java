@@ -1,9 +1,9 @@
 package com.test.portal.webportal.client.presenters.home;
 
-import com.progressoft.brix.domino.api.client.annotations.InjectContext;
-import com.progressoft.brix.domino.api.client.mvp.presenter.Presentable;
 import com.test.portal.webportal.shared.extension.WebPortalContext;
 import com.test.portal.webportal.shared.extension.WebPortalExtensionPoint;
+import org.dominokit.domino.api.client.annotations.InjectContext;
+import org.dominokit.domino.api.client.mvp.presenter.Presentable;
 
 /**
  * IHomeWebPortalPresenter.

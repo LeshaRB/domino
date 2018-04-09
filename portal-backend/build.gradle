@@ -12,11 +12,11 @@ dependencies {
   // compileOnly("com.google.gwt:gwt-servlet:$gwtVersion")
 
   // Domino framework
-  compileOnly("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
-  // compileOnly("com.progressoft.brix.domino.logging:domino-remote-logging:$dominoVersion")
-  // compileOnly("com.progressoft.brix.domino.logging:domino-log4j-server-logging:$dominoVersion")
-  // compileOnly("com.progressoft.brix.domino.sample:todolist-items-backend:1.0-SNAPSHOT")
-  annotationProcessor("com.progressoft.brix.domino.api:domino-api-server:$dominoVersion")
+  compileOnly("org.dominokit.domino.api:domino-api-server:$dominoVersion")
+  // compileOnly("org.dominokit.domino.logging:domino-remote-logging:$dominoVersion")
+  // compileOnly("org.dominokit.domino.logging:domino-log4j-server-logging:$dominoVersion")
+  // compileOnly("org.dominokit.domino.sample:todolist-items-backend:1.0-SNAPSHOT")
+  annotationProcessor("org.dominokit.domino.api:domino-api-server:$dominoVersion")
 
   // Spring framework
   // compileOnly("org.springframework.boot:spring-boot-configuration-processor")
